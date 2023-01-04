@@ -1,0 +1,150 @@
+{
+  "data": {
+    "tabs": [
+      "Videos",
+      "Stories",
+      "Concepts"
+    ],
+    "videos": [
+      {
+        "id": 114407,
+        "title": "Addition and Subtraction of Algebraic Expressions",
+        "createdOn": "2019-06-20T06:16:32.275421+00:00",
+        "uniqueKey": "WEZAAPu0",
+        "durationS": 358,
+        "duration": "5:58",
+        "durationMin": "6",
+        "thumbnails": {
+          "s120": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/114407/dikwvf_120.png",
+          "s240": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/114407/dikwvf_240.png",
+          "s360": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/114407/dikwvf_360.png",
+          "s640": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/114407/dikwvf_640.png",
+          "id": 39507
+        },
+        "isDownloadable": true,
+        "lockType": "free",
+        "isLocked": false,
+        "isBookmarked": false
+      },
+      {
+        "id": 130180,
+        "title": "Addition of Polynomials",
+        "createdOn": "2020-02-03T11:18:27.580487+00:00",
+        "uniqueKey": "X6Cvdep8",
+        "durationS": 794,
+        "duration": "13:14",
+        "durationMin": "14",
+        "thumbnails": {
+          "s120": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/130180/o97myv_120.png",
+          "s240": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/130180/o97myv_240.png",
+          "s360": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/130180/o97myv_360.png",
+          "s640": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/130180/o97myv_640.png",
+          "id": 32077
+        },
+        "isDownloadable": true,
+        "lockType": "free",
+        "isLocked": false,
+        "isBookmarked": false
+      },
+      {
+        "id": 16517,
+        "title": "Subtraction of Polynomials",
+        "createdOn": "2017-08-05T11:02:22+00:00",
+        "uniqueKey": "XTNBJIGu",
+        "durationS": 647,
+        "duration": "10:47",
+        "durationMin": "11",
+        "thumbnails": {
+          "s120": "https://d1hhj0t1vdqi7c.cloudfront.net/v1/bjlrWmE0YUNWUms=/",
+          "s240": "https://d1hhj0t1vdqi7c.cloudfront.net/v1/bjlrWmE0YUNWUms=/mq/",
+          "s360": "https://d1hhj0t1vdqi7c.cloudfront.net/v1/bjlrWmE0YUNWUms=/hq/",
+          "s640": "https://d1hhj0t1vdqi7c.cloudfront.net/v1/bjlrWmE0YUNWUms=/sd/"
+        },
+        "isDownloadable": true,
+        "lockType": "free",
+        "isLocked": false,
+        "isBookmarked": false
+      },
+      {
+        "id": 142093,
+        "title": "Subtraction of Polynomials",
+        "createdOn": "2021-03-10T11:39:44.778453+00:00",
+        "uniqueKey": "pGQbRnRM",
+        "durationS": 274,
+        "duration": "4:34",
+        "durationMin": "5",
+        "thumbnails": {
+          "s120": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/142093/ft9j6j_120.png",
+          "s240": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/142093/ft9j6j_240.png",
+          "s360": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/142093/ft9j6j_360.png",
+          "s640": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/142093/ft9j6j_640.png",
+          "id": 53000
+        },
+        "isDownloadable": false,
+        "lockType": "free",
+        "isLocked": false,
+        "isBookmarked": false
+      },
+      {
+        "id": 115595,
+        "title": "Division of Algebraic Expressions",
+        "createdOn": "2019-06-24T09:59:44.400481+00:00",
+        "uniqueKey": "UlLbUXdM",
+        "durationS": 260,
+        "duration": "4:20",
+        "durationMin": "5",
+        "thumbnails": {
+          "s120": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/115595/dxkl9f_120.png",
+          "s240": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/115595/dxkl9f_240.png",
+          "s360": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/115595/dxkl9f_360.png",
+          "s640": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/115595/dxkl9f_640.png",
+          "id": 24634
+        },
+        "isDownloadable": true,
+        "lockType": "free",
+        "isLocked": false,
+        "isBookmarked": false
+      },
+      {
+        "id": 21619,
+        "title": "Division of Polynomial by Monomial",
+        "createdOn": "2017-10-11T11:11:40+00:00",
+        "uniqueKey": "DSmrO50M",
+        "durationS": 534,
+        "duration": "8:54",
+        "durationMin": "9",
+        "thumbnails": {
+          "s120": "https://d1hhj0t1vdqi7c.cloudfront.net/v1/QnBHT01PWHN5TmM=/",
+          "s240": "https://d1hhj0t1vdqi7c.cloudfront.net/v1/QnBHT01PWHN5TmM=/mq/",
+          "s360": "https://d1hhj0t1vdqi7c.cloudfront.net/v1/QnBHT01PWHN5TmM=/hq/",
+          "s640": "https://d1hhj0t1vdqi7c.cloudfront.net/v1/QnBHT01PWHN5TmM=/sd/"
+        },
+        "isDownloadable": true,
+        "lockType": "free",
+        "isLocked": false,
+        "isBookmarked": false
+      }
+    ],
+    "isKlassSubscribed": true,
+    "isModuleSubscribed": true,
+    "subject": {
+      "id": 399090,
+      "name": "Maths",
+      "slug": "maths"
+    },
+    "chapter": {
+      "id": 468146,
+      "name": "Polynomials",
+      "slug": "polynomials",
+      "cheatsheetUrls": [
+        {
+          "url": null
+        }
+      ]
+    }
+  },
+  "status": "success",
+  "statusCode": 200,
+  "message": "",
+  "errorCode": ""
+}

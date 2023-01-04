@@ -1,0 +1,315 @@
+{
+    "data": {
+        "subject": {
+            "name": "Maths",
+            "id": 399090,
+            "slug": "maths"
+        },
+        "chapters": [
+            {
+                "name": "Polynomials",
+                "slug": "polynomials",
+                "id": 468146,
+                "nVideos": 6,
+                "nStories": 3,
+                "nConcepts": 4,
+                "nExercise": 4,
+                "sequenceNo": 1
+            },
+            {
+                "name": "Fundamentals of Mathematics",
+                "slug": "fundamentals-of-mathematics",
+                "id": 468640,
+                "nVideos": 2,
+                "nStories": 1,
+                "nConcepts": 7,
+                "nExercise": 6,
+                "sequenceNo": 2
+            },
+            {
+                "name": "Sets, Relations and Functions",
+                "slug": "sets-relations-and-functions",
+                "id": 469467,
+                "nVideos": 9,
+                "nStories": 8,
+                "nConcepts": 18,
+                "nExercise": 6,
+                "sequenceNo": 3
+            },
+            {
+                "name": "Logarithms",
+                "slug": "logarithms",
+                "id": 469654,
+                "nVideos": 11,
+                "nStories": 11,
+                "nConcepts": 17,
+                "nExercise": 5,
+                "sequenceNo": 4
+            },
+            {
+                "name": "Quadratic Equations",
+                "slug": "quadratic-equations",
+                "id": 469677,
+                "nVideos": 10,
+                "nStories": 10,
+                "nConcepts": 9,
+                "nExercise": 6,
+                "sequenceNo": 5
+            },
+            {
+                "name": "Sequences and Series",
+                "slug": "sequences-and-series",
+                "id": 469826,
+                "nVideos": 31,
+                "nStories": 18,
+                "nConcepts": 37,
+                "nExercise": 6,
+                "sequenceNo": 6
+            },
+            {
+                "name": "Trigonometry",
+                "slug": "trigonometry",
+                "id": 469911,
+                "nVideos": 19,
+                "nStories": 14,
+                "nConcepts": 35,
+                "nExercise": 6,
+                "sequenceNo": 7
+            },
+            {
+                "name": "Solution of Triangle",
+                "slug": "solution-of-triangle",
+                "id": 469973,
+                "nVideos": 8,
+                "nStories": 10,
+                "nConcepts": 5,
+                "nExercise": 5,
+                "sequenceNo": 8
+            },
+            {
+                "name": "Inverse Trigonometric Functions",
+                "slug": "inverse-trigonometric-functions",
+                "id": 469991,
+                "nVideos": 2,
+                "nStories": 2,
+                "nConcepts": 2,
+                "nExercise": 6,
+                "sequenceNo": 9
+            },
+            {
+                "name": "Permutations and Combinations",
+                "slug": "permutations-and-combinations",
+                "id": 470001,
+                "nVideos": 38,
+                "nStories": 14,
+                "nConcepts": 40,
+                "nExercise": 6,
+                "sequenceNo": 10
+            },
+            {
+                "name": "Binomial Theorem",
+                "slug": "binomial-theorem",
+                "id": 470020,
+                "nVideos": 13,
+                "nStories": 9,
+                "nConcepts": 19,
+                "nExercise": 6,
+                "sequenceNo": 11
+            },
+            {
+                "name": "Coordinate Geometry",
+                "slug": "coordinate-geometry",
+                "id": 470035,
+                "nVideos": 4,
+                "nStories": 12,
+                "nConcepts": 9,
+                "nExercise": 6,
+                "sequenceNo": 12
+            },
+            {
+                "name": "Straight Lines and Pair of Straight Lines",
+                "slug": "straight-lines-and-pair-of-straight-lines",
+                "id": 470063,
+                "nVideos": 11,
+                "nStories": 6,
+                "nConcepts": 26,
+                "nExercise": 6,
+                "sequenceNo": 13
+            },
+            {
+                "name": "Circles",
+                "slug": "circles",
+                "id": 470092,
+                "nVideos": 34,
+                "nStories": 34,
+                "nConcepts": 68,
+                "nExercise": 6,
+                "sequenceNo": 14
+            },
+            {
+                "name": "Parabola",
+                "slug": "parabola",
+                "id": 470126,
+                "nVideos": 7,
+                "nStories": 9,
+                "nConcepts": 26,
+                "nExercise": 6,
+                "sequenceNo": 15
+            },
+            {
+                "name": "Ellipse",
+                "slug": "ellipse",
+                "id": 470152,
+                "nVideos": 8,
+                "nStories": 7,
+                "nConcepts": 26,
+                "nExercise": 6,
+                "sequenceNo": 16
+            },
+            {
+                "name": "Hyperbola",
+                "slug": "hyperbola",
+                "id": 470178,
+                "nVideos": 6,
+                "nStories": 6,
+                "nConcepts": 21,
+                "nExercise": 6,
+                "sequenceNo": 17
+            },
+            {
+                "name": "Complex Numbers",
+                "slug": "complex-numbers",
+                "id": 470197,
+                "nVideos": 44,
+                "nStories": 26,
+                "nConcepts": 97,
+                "nExercise": 6,
+                "sequenceNo": 18
+            },
+            {
+                "name": "Matrices",
+                "slug": "matrices",
+                "id": 470218,
+                "nVideos": 19,
+                "nStories": 14,
+                "nConcepts": 51,
+                "nExercise": 6,
+                "sequenceNo": 19
+            },
+            {
+                "name": "Determinants",
+                "slug": "determinants",
+                "id": 470237,
+                "nVideos": 1,
+                "nStories": 1,
+                "nConcepts": 3,
+                "nExercise": 6,
+                "sequenceNo": 20
+            },
+            {
+                "name": "Probability",
+                "slug": "probability",
+                "id": 470250,
+                "nVideos": 7,
+                "nStories": 8,
+                "nConcepts": 22,
+                "nExercise": 6,
+                "sequenceNo": 21
+            },
+            {
+                "name": "Limits and Continuity",
+                "slug": "limits-and-continuity",
+                "id": 470287,
+                "nVideos": 38,
+                "nStories": 17,
+                "nConcepts": 37,
+                "nExercise": 6,
+                "sequenceNo": 22
+            },
+            {
+                "name": "Differentiation",
+                "slug": "differentiation",
+                "id": 470310,
+                "nVideos": 40,
+                "nStories": 23,
+                "nConcepts": 38,
+                "nExercise": 6,
+                "sequenceNo": 23
+            },
+            {
+                "name": "Application of Derivatives",
+                "slug": "application-of-derivatives",
+                "id": 470340,
+                "nVideos": 29,
+                "nStories": 7,
+                "nConcepts": 36,
+                "nExercise": 6,
+                "sequenceNo": 24
+            },
+            {
+                "name": "Indefinite Integrals",
+                "slug": "indefinite-integrals",
+                "id": 470358,
+                "nVideos": 20,
+                "nStories": 9,
+                "nConcepts": 25,
+                "nExercise": 6,
+                "sequenceNo": 25
+            },
+            {
+                "name": "Definite Integrals",
+                "slug": "definite-integrals",
+                "id": 470389,
+                "nVideos": 13,
+                "nStories": 4,
+                "nConcepts": 12,
+                "nExercise": 6,
+                "sequenceNo": 26
+            },
+            {
+                "name": "Area of Bounded Regions",
+                "slug": "area-of-bounded-regions",
+                "id": 470401,
+                "nVideos": 4,
+                "nStories": 6,
+                "nConcepts": 3,
+                "nExercise": 5,
+                "sequenceNo": 27
+            },
+            {
+                "name": "Differential Equations",
+                "slug": "differential-equations",
+                "id": 470412,
+                "nVideos": 19,
+                "nStories": 10,
+                "nConcepts": 29,
+                "nExercise": 6,
+                "sequenceNo": 28
+            },
+            {
+                "name": "Vector Algebra",
+                "slug": "vector-algebra",
+                "id": 470423,
+                "nVideos": 18,
+                "nStories": 13,
+                "nConcepts": 54,
+                "nExercise": 6,
+                "sequenceNo": 29
+            },
+            {
+                "name": "3D Geometry",
+                "slug": "3d-geometry",
+                "id": 470454,
+                "nVideos": 15,
+                "nStories": 12,
+                "nConcepts": 30,
+                "nExercise": 6,
+                "sequenceNo": 30
+            }
+        ]
+    },
+    "status": "success",
+    "status_code": 200,
+    "message": "",
+    "error_code": ""
+}

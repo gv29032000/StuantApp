@@ -1,0 +1,38 @@
+{
+    "data": {
+      "exams": [
+        {
+          "exam": {
+            "id": 279,
+            "display_name": "CBSE - Science",
+            "icon_identifier": "cbse",
+            "name": "CBSE - Science",
+            "slug": "central-board-of-secondary-education-class-12-engineering-medical",
+            "long_name": "Central Board of Secondary Education"
+          },
+          "syllabus_id": 487892,
+          "is_preferred": false,
+          "is_current_syllabus": true,
+          "progress": 0
+        },
+        {
+          "exam": {
+            "id": 29,
+            "display_name": "JEE Advanced",
+            "icon_identifier": "cbse",
+            "name": "JEE Advanced",
+            "slug": "jee-advanced",
+            "long_name": "Joint Entrance Examination (Advanced)"
+          },
+          "syllabus_id": 488141,
+          "is_preferred": false,
+          "is_current_syllabus": false,
+          "progress": 0
+        }
+      ]
+    },
+    "status": "success",
+    "status_code": 200,
+    "message": "",
+    "error_code": ""
+  }

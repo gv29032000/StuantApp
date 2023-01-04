@@ -1,0 +1,384 @@
+{
+    "data": {
+        "chapter": {
+            "name": "Polynomials",
+            "parentId": 399090,
+            "subjectName": "Maths",
+            "subjectSlug": "maths",
+            "subjectId": 399090,
+            "slug": "polynomials",
+            "sequence": 8,
+            "id": 468146,
+            "difficultyLevel": 1,
+            "requiredEffort": 0,
+            "goal_count": 2,
+            "status": "visible",
+            "has_lectures": true,
+            "n_stories": 3,
+            "has_learning_sources": false,
+            "has_learning_sources_video": false,
+            "has_learning_sources_links": false,
+            "has_concepts": true,
+            "has_ncert_solutions": false,
+            "has_question_sets": true,
+            "has_report": true,
+            "percentage_completion": 0
+        },
+        "videos": [
+            {
+                "author": null,
+                "avg_rating": 0,
+                "created_on": "2019-06-20T06:16:32.275421+00:00",
+                "duration": "5:58",
+                "description": null,
+                "id": 114407,
+                "unique_key": "WEZAAPu0",
+                "language": "english",
+                "last_published_on": "2020-03-21T02:40:18+05:30",
+                "provider": "toppr",
+                "status": "published",
+                "size": 0,
+                "title": "Addition and Subtraction of Algebraic Expressions",
+                "url": "",
+                "video_type": "conceptual",
+                "thumbnail": "/static/web/images/video_thumbnail_120X68.jpg",
+                "is_story_linked": false,
+                "story_id": null,
+                "source": "youtube",
+                "duration_s": 358,
+                "durationMin": "6",
+                "isDownloadable": true,
+                "thumbnails": {
+                    "s120": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/114407/dikwvf_120.png",
+                    "s240": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/114407/dikwvf_240.png",
+                    "s360": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/114407/dikwvf_360.png",
+                    "s640": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/114407/dikwvf_640.png",
+                    "id": 39507
+                },
+                "languages": [
+                    {
+                        "language": "english",
+                        "language_abbr": "eng",
+                        "youtube_id": "GRHoKMXI32Y",
+                        "duration": "5:58",
+                        "durationMin": "6",
+                        "id": 123403,
+                        "delivery_source": "limelight",
+                        "source_urls": {
+                            "youtube": null,
+                            "limelight": "https://toppr.s.llnwi.net/debug/Skandha_Content/hls/f5a0c48aedae4b1bae2be7550e18bba0/hls_f5a0c48aedae4b1bae2be7550e18bba0.m3u8"
+                        },
+                        "rating": ""
+                    },
+                    {
+                        "language": "hindi",
+                        "language_abbr": "hin",
+                        "youtube_id": "unSG6WP_SxI",
+                        "duration": "5:25",
+                        "durationMin": "6",
+                        "id": 123407,
+                        "delivery_source": "limelight",
+                        "source_urls": {
+                            "youtube": null,
+                            "limelight": "https://toppr.s.llnwi.net/debug/Skandha_Content/hls/b1be236f9ec6409188c822c7303d07a6/hls_b1be236f9ec6409188c822c7303d07a6.m3u8"
+                        },
+                        "rating": ""
+                    }
+                ],
+                "default_language": "english",
+                "youtube_id": "GRHoKMXI32Y",
+                "youtube_demo_id": null,
+                "sequence_no": 1,
+                "youtubeUrl": "https://www.youtube.com/watch?v=GRHoKMXI32Y",
+                "is_watched": false,
+                "is_bookmarked": false,
+                "lock_type": "free",
+                "is_locked": false,
+                "watch_time": 0,
+                "video_watched_percentage": 0,
+                "last_watched_time": "2022-12-21T12:35:08+05:30"
+            },
+            {
+                "author": null,
+                "avg_rating": 0,
+                "created_on": "2020-02-03T11:18:27.580487+00:00",
+                "duration": "13:14",
+                "description": null,
+                "id": 130180,
+                "unique_key": "X6Cvdep8",
+                "language": "english",
+                "last_published_on": "2020-02-03T17:48:51+05:30",
+                "provider": "toppr",
+                "status": "published",
+                "size": 0,
+                "title": "Addition of Polynomials",
+                "url": "",
+                "video_type": "conceptual",
+                "thumbnail": "/static/web/images/video_thumbnail_120X68.jpg",
+                "is_story_linked": false,
+                "story_id": null,
+                "source": "youtube",
+                "duration_s": 794,
+                "durationMin": "14",
+                "isDownloadable": true,
+                "thumbnails": {
+                    "s120": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/130180/o97myv_120.png",
+                    "s240": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/130180/o97myv_240.png",
+                    "s360": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/130180/o97myv_360.png",
+                    "s640": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/130180/o97myv_640.png",
+                    "id": 32077
+                },
+                "languages": [
+                    {
+                        "language": "english",
+                        "language_abbr": "eng",
+                        "youtube_id": "rJr_IJxXyKQ",
+                        "duration": "13:14",
+                        "durationMin": "14",
+                        "id": 143235,
+                        "delivery_source": "limelight",
+                        "source_urls": {
+                            "youtube": null,
+                            "limelight": "https://toppr.s.llnwi.net/debug/Skandha_Content/hls/ef90438b037d46d3a259a6660a153e13/hls_ef90438b037d46d3a259a6660a153e13.m3u8"
+                        },
+                        "rating": ""
+                    },
+                    {
+                        "language": "hindi",
+                        "language_abbr": "hin",
+                        "youtube_id": "OGuXjy0MEd0",
+                        "duration": "11:23",
+                        "durationMin": "12",
+                        "id": 143243,
+                        "delivery_source": "limelight",
+                        "source_urls": {
+                            "youtube": null,
+                            "limelight": "https://toppr.s.llnwi.net/debug/Skandha_Content/hls/e3e4f617094c4f4bacb7c29a2b22db96/hls_e3e4f617094c4f4bacb7c29a2b22db96.m3u8"
+                        },
+                        "rating": ""
+                    }
+                ],
+                "default_language": "english",
+                "youtube_id": "rJr_IJxXyKQ",
+                "youtube_demo_id": null,
+                "sequence_no": 2,
+                "youtubeUrl": "https://www.youtube.com/watch?v=rJr_IJxXyKQ",
+                "is_watched": false,
+                "is_bookmarked": false,
+                "lock_type": "free",
+                "is_locked": false,
+                "watch_time": 0,
+                "video_watched_percentage": 0,
+                "last_watched_time": "2022-12-15T15:45:43+05:30"
+            },
+            {
+                "author": null,
+                "avg_rating": 0,
+                "created_on": "2017-08-05T11:02:22+00:00",
+                "duration": "10:47",
+                "description": null,
+                "id": 16517,
+                "unique_key": "XTNBJIGu",
+                "language": "english",
+                "last_published_on": "2017-10-26T16:01:44+05:30",
+                "provider": "toppr",
+                "status": "published",
+                "size": 0,
+                "title": "Subtraction of Polynomials",
+                "url": "",
+                "video_type": "conceptual",
+                "thumbnail": "/static/web/images/video_thumbnail_120X68.jpg",
+                "is_story_linked": false,
+                "story_id": null,
+                "source": "youtube",
+                "duration_s": 647,
+                "durationMin": "11",
+                "isDownloadable": true,
+                "thumbnails": {
+                    "s120": "https://d1hhj0t1vdqi7c.cloudfront.net/v1/bjlrWmE0YUNWUms=/",
+                    "s240": "https://d1hhj0t1vdqi7c.cloudfront.net/v1/bjlrWmE0YUNWUms=/mq/",
+                    "s360": "https://d1hhj0t1vdqi7c.cloudfront.net/v1/bjlrWmE0YUNWUms=/hq/",
+                    "s640": "https://d1hhj0t1vdqi7c.cloudfront.net/v1/bjlrWmE0YUNWUms=/sd/"
+                },
+                "languages": [
+                    {
+                        "language": "english",
+                        "language_abbr": "eng",
+                        "youtube_id": "n9kZa4aCVRk",
+                        "duration": "10:47",
+                        "durationMin": "11",
+                        "id": 13536,
+                        "delivery_source": "limelight",
+                        "source_urls": {
+                            "youtube": "https://youtube.com/watch?v=n9kZa4aCVRk",
+                            "limelight": "https://toppr.s.llnwi.net/debug/Skandha_Content/hls/805f76f5471244dda1d5c5c62420e1d5/hls_805f76f5471244dda1d5c5c62420e1d5.m3u8"
+                        },
+                        "rating": "great"
+                    },
+                    {
+                        "language": "hindi",
+                        "language_abbr": "hin",
+                        "youtube_id": "3U3hsq_rcIA",
+                        "duration": "9:24",
+                        "durationMin": "10",
+                        "id": 21986,
+                        "delivery_source": "limelight",
+                        "source_urls": {
+                            "youtube": null,
+                            "limelight": "https://toppr.s.llnwi.net/debug/Skandha_Content/hls/78e42d856cdd47bf8252c14187b45f74/hls_78e42d856cdd47bf8252c14187b45f74.m3u8"
+                        },
+                        "rating": ""
+                    }
+                ],
+                "default_language": "english",
+                "youtube_id": "n9kZa4aCVRk",
+                "youtube_demo_id": null,
+                "sequence_no": 3,
+                "youtubeUrl": "https://www.youtube.com/watch?v=n9kZa4aCVRk",
+                "is_watched": false,
+                "is_bookmarked": false,
+                "lock_type": "free",
+                "is_locked": false,
+                "watch_time": 631,
+                "video_watched_percentage": 97.52704791344668,
+                "last_watched_time": "2022-12-21T10:06:33+05:30"
+            },
+            {
+                "author": null,
+                "avg_rating": 0,
+                "created_on": "2021-03-10T11:39:44.778453+00:00",
+                "duration": "4:34",
+                "description": null,
+                "id": 142093,
+                "unique_key": "pGQbRnRM",
+                "language": "english",
+                "last_published_on": "2021-03-10T17:49:51+05:30",
+                "provider": "toppr",
+                "status": "published",
+                "size": 0,
+                "title": "Subtraction of Polynomials",
+                "url": "",
+                "video_type": "conceptual",
+                "thumbnail": "/static/web/images/video_thumbnail_120X68.jpg",
+                "is_story_linked": false,
+                "story_id": null,
+                "source": "youtube",
+                "duration_s": 274,
+                "durationMin": "5",
+                "isDownloadable": false,
+                "thumbnails": {
+                    "s120": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/142093/ft9j6j_120.png",
+                    "s240": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/142093/ft9j6j_240.png",
+                    "s360": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/142093/ft9j6j_360.png",
+                    "s640": "https://d22la3wb64sie2.cloudfront.net/generated-thumbnails/142093/ft9j6j_640.png",
+                    "id": 53000
+                },
+                "languages": [
+                    {
+                        "language": "hindi",
+                        "language_abbr": "hin",
+                        "youtube_id": "eXFSCtJiCaM",
+                        "duration": "6:01",
+                        "durationMin": "7",
+                        "id": 156205,
+                        "rating": ""
+                    },
+                    {
+                        "language": "english",
+                        "language_abbr": "eng",
+                        "youtube_id": "A-ii41dvejI",
+                        "duration": "4:34",
+                        "durationMin": "5",
+                        "id": 156204,
+                        "rating": ""
+                    }
+                ],
+                "default_language": "english",
+                "youtube_id": "A-ii41dvejI",
+                "youtube_demo_id": null,
+                "sequence_no": 4,
+                "youtubeUrl": "https://www.youtube.com/watch?v=A-ii41dvejI",
+                "is_watched": false,
+                "is_bookmarked": false,
+                "lock_type": "free",
+                "is_locked": false,
+                "watch_time": 0,
+                "video_watched_percentage": 0,
+                "last_watched_time": "2022-12-21T10:05:45+05:30"
+            }
+        ],
+        "nVideos": 4,
+        "subjectName": "Maths",
+        "subjectId": 399090,
+        "subjectSlug": "maths",
+        "chapter_name": "Polynomials",
+        "topic_id": 468146,
+        "chapter_id": 468146,
+        "chapter_slug": "polynomials",
+        "id": 2798143,
+        "name": "Operations on Algebraic Expressions",
+        "bucket_cutoffs": "",
+        "scoring_matrix": "",
+        "status": "visible",
+        "total_duration": "0.5758333333333333 hr 34.55 min 33 sec",
+        "active_page": "learn",
+        "video_ratings": [
+            {
+                "value": "bad",
+                "label": "Bad",
+                "icon_type": "bad"
+            },
+            {
+                "value": "good",
+                "label": "Good",
+                "icon_type": "good"
+            },
+            {
+                "value": "great",
+                "label": "Great",
+                "icon_type": "great"
+            }
+        ],
+        "videos_icon_identifier": "videos",
+        "progress": 0,
+        "is_klass_subscribed": false,
+        "is_module_subscribed": false,
+        "description": "",
+        "lock_type": "free",
+        "sequence_no": 1,
+        "level_info": null,
+        "n_levels": 5,
+        "goal_practiced": false,
+        "is_locked": false,
+        "stories": [
+            {
+                "id": 34486,
+                "title": "Addition and Subtraction of Algebraic Expressions",
+                "read_time": "3 mins",
+                "is_locked": false,
+                "thumbnail_url": {
+                    "id": 2153,
+                    "hexcode": "8247A9",
+                    "webp": {
+                        "350": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/34486/Nd8D0_350.webp"
+                    },
+                    "jpeg": {
+                        "120": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/34486/Nd8D0_120.jpeg",
+                        "240": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/34486/Nd8D0_240.jpeg",
+                        "360": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/34486/Nd8D0_360.jpeg",
+                        "640": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/34486/Nd8D0_640.jpeg"
+                    }
+                },
+                "sequence_no": 1,
+                "has_seen": false,
+                "lock_type": "free"
+            }
+        ],
+        "n_stories": 1,
+        "stories_icon_identifier": "stories"
+    },
+    "status": "success",
+    "status_code": 200,
+    "message": "",
+    "error_code": ""
+}

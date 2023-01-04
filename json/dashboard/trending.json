@@ -1,0 +1,169 @@
+{
+    "data": {
+      "videos": {
+        "title": "Recommended Videos",
+        "objects": [],
+        "sequence_number": 1
+      },
+      "live-classes": {
+        "title": "Recommended Live Classes",
+        "sequence_number": 2
+      },
+      "stories": {
+        "title": "Recommended Stories",
+        "objects": [
+          {
+            "id": 731,
+            "title": "Introduction to Quantum numbers",
+            "read_time": "3 mins",
+            "is_locked": false,
+            "has_seen": false,
+            "thumbnail_url": {
+              "id": 43036,
+              "hexcode": "5644AC",
+              "webp": {
+                "350": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/731/uvtVY_350.webp"
+              },
+              "jpeg": {
+                "120": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/731/uvtVY_120.jpeg",
+                "240": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/731/uvtVY_240.jpeg",
+                "360": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/731/uvtVY_360.jpeg",
+                "640": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/731/uvtVY_640.jpeg"
+              }
+            },
+            "lock_type": "free",
+            "sequence_no": 1
+          },
+          {
+            "id": 733,
+            "title": "Kossel-Lewis Approach To Chemical Bond",
+            "read_time": "3 mins",
+            "is_locked": false,
+            "has_seen": false,
+            "thumbnail_url": {
+              "id": 914,
+              "hexcode": "3E4B6C",
+              "webp": {
+                "350": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/733/7vhLf_350.webp"
+              },
+              "jpeg": {
+                "120": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/733/7vhLf_120.jpeg",
+                "240": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/733/7vhLf_240.jpeg",
+                "360": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/733/7vhLf_360.jpeg",
+                "640": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/733/7vhLf_640.jpeg"
+              }
+            },
+            "lock_type": "free",
+            "sequence_no": 2
+          },
+          {
+            "id": 2985,
+            "title": "VSEPR Theory",
+            "read_time": "3 mins",
+            "is_locked": false,
+            "has_seen": false,
+            "thumbnail_url": {
+              "id": 6182,
+              "hexcode": "0C9534",
+              "webp": {
+                "350": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/2985/YnmyK_350.webp"
+              },
+              "jpeg": {
+                "120": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/2985/YnmyK_120.jpeg",
+                "240": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/2985/YnmyK_240.jpeg",
+                "360": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/2985/YnmyK_360.jpeg",
+                "640": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/2985/YnmyK_640.jpeg"
+              }
+            },
+            "lock_type": "free",
+            "sequence_no": 3
+          },
+          {
+            "id": 4133,
+            "title": "Energy of Electron in nth Orbit",
+            "read_time": "3 mins",
+            "is_locked": false,
+            "has_seen": false,
+            "thumbnail_url": {
+              "id": 894,
+              "hexcode": "3E4B6C",
+              "webp": {
+                "350": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/4133/Fmqgk_350.webp"
+              },
+              "jpeg": {
+                "120": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/4133/Fmqgk_120.jpeg",
+                "240": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/4133/Fmqgk_240.jpeg",
+                "360": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/4133/Fmqgk_360.jpeg",
+                "640": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/4133/Fmqgk_640.jpeg"
+              }
+            },
+            "lock_type": "free",
+            "sequence_no": 4
+          },
+          {
+            "id": 4151,
+            "title": "Nodal Surface and Nodes of Different Orbitals",
+            "read_time": "3 mins",
+            "is_locked": false,
+            "has_seen": false,
+            "thumbnail_url": {
+              "id": 3028,
+              "hexcode": "0A718C",
+              "webp": {
+                "350": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/4151/2FhVS_350.webp"
+              },
+              "jpeg": {
+                "120": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/4151/2FhVS_120.jpeg",
+                "240": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/4151/2FhVS_240.jpeg",
+                "360": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/4151/2FhVS_360.jpeg",
+                "640": "https://d2nygi8di7v6iw.cloudfront.net/generated-thumbnails/4151/2FhVS_640.jpeg"
+              }
+            },
+            "lock_type": "free",
+            "sequence_no": 5
+          }
+        ],
+        "sequence_number": 3
+      },
+      "games": {
+        "title": "Recommended Games",
+        "sequence_number": 4,
+        "objects": [
+          {
+            "game_type": "vocabulary",
+            "game_title": "Vocabulary Game",
+            "game_image": {
+              "primary_slug": "",
+              "secondary_slug": "vocabulary-builder"
+            },
+            "game_sub_title": "Test your English skills!",
+            "n_active_online": 1610
+          },
+          {
+            "game_type": "word_twist",
+            "game_title": "Word Twist Game",
+            "game_image": {
+              "primary_slug": "",
+              "secondary_slug": "word-twister"
+            },
+            "game_sub_title": "Find the right word!",
+            "n_active_online": 1141
+          },
+          {
+            "game_type": "mental_math",
+            "game_title": "Mental Math Game",
+            "game_image": {
+              "primary_slug": "",
+              "secondary_slug": "mental-maths"
+            },
+            "game_sub_title": "Test your Calcluation speed",
+            "n_active_online": 1211
+          }
+        ]
+      }
+    },
+    "status": "success",
+    "status_code": 200,
+    "message": "",
+    "error_code": ""
+  }
