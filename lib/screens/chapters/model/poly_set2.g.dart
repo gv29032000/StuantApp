@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of '../model/poly_set2.dart';
+part of 'poly_set2.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

@@ -130,52 +130,53 @@ class NCERTSolutionPage extends StatelessWidget {
                                     ''),
                               ),
                             ),
-                            Obx(() {
-                              return controller.showSoln.value
-                                  ? Container(
-                                      decoration: BoxDecoration(
-                                          color: Colors.lightGreen.shade50,
-                                          borderRadius:
-                                              BorderRadius.circular(10)),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(15.0),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              'SOLUTION',
-                                              style: TextStyle(
-                                                  letterSpacing: 0.5,
-                                                  color: Colors.lightGreenAccent
-                                                      .shade700,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            const SizedBox(
-                                              height: 10,
-                                            ),
-                                            TeXView(
-                                              child: TeXViewDocument(
-                                                  controller.ncertSolutions
-                                                          ?.data?.questions
-                                                          ?.elementAt(index)
-                                                          .solution ??
-                                                      '',
-                                                  style: TeXViewStyle(
-                                                      contentColor:
-                                                          Colors.grey.shade800,
-                                                      fontStyle: TeXViewFontStyle(
-                                                          fontSize: 14,
-                                                          fontWeight:
-                                                              TeXViewFontWeight
-                                                                  .w400))),
-                                            ),
-                                          ],
-                                        ),
+                            controller.ncertSolutions?.data?.questions
+                                        ?.elementAt(index)
+                                        .solutionShown ==
+                                    true
+                                ? Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.lightGreen.shade50,
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(15.0),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'SOLUTION',
+                                            style: TextStyle(
+                                                letterSpacing: 0.5,
+                                                color: Colors
+                                                    .lightGreenAccent.shade700,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          const SizedBox(
+                                            height: 10,
+                                          ),
+                                          TeXView(
+                                            child: TeXViewDocument(
+                                                controller.ncertSolutions?.data
+                                                        ?.questions
+                                                        ?.elementAt(index)
+                                                        .solution ??
+                                                    '',
+                                                style: TeXViewStyle(
+                                                    contentColor:
+                                                        Colors.grey.shade800,
+                                                    fontStyle: TeXViewFontStyle(
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            TeXViewFontWeight
+                                                                .w400))),
+                                          ),
+                                        ],
                                       ),
-                                    )
-                                  : const SizedBox();
-                            }),
+                                    ),
+                                  )
+                                : const SizedBox(),
                           ],
                         ),
                       ],
@@ -221,23 +222,46 @@ class NCERTSolutionPage extends StatelessWidget {
                     Obx(() {
                       return ElevatedButton(
                           onPressed: () {
-                            controller.showSoln.isFalse
-                                ? controller.showSoln.value =
-                                    !controller.showSoln.value
-                                : controller.currIndex.value == 9
-                                    ? showDialog()
-                                    : controller.nextPage();
+                            controller.solutionCall(controller.currIndex.value);
+
+                            // controller.showSoln.isFalse
+                            //     ? controller.showSoln.value =
+                            //         !controller.showSoln.value
+                            controller.currIndex.value == 9
+                                ? showDialog()
+                                // : controller.ncertSolutions?.data?.questions
+                                //             ?.elementAt(
+                                //                 controller.currIndex.value)
+                                //             .showSolution ==
+                                //         true
+                                //     ?
+                                : controller.ncertSolutions?.data?.questions
+                                            ?.elementAt(
+                                                controller.currIndex.value)
+                                            .solutionShown ==
+                                        true
+                                    ? controller.nextPage()
+                                    : controller.showSolution1(
+                                        controller.currIndex.value);
                           },
                           style: ElevatedButton.styleFrom(
                               elevation: 0,
                               minimumSize: const Size(270, 50),
                               shape: const StadiumBorder(),
-                              backgroundColor: controller.showSoln.isFalse
+                              backgroundColor: controller
+                                          .ncertSolutions?.data?.questions
+                                          ?.elementAt(
+                                              controller.currIndex.value)
+                                          .showSolution ==
+                                      false
                                   ? Colors.lightBlue.shade300
                                   : const Color(0xff7ed321)),
-                          child: controller.showSoln.isFalse
+                          child: controller.ncertSolutions?.data?.questions
+                                      ?.elementAt(controller.currIndex.value)
+                                      .showSolution ==
+                                  true
                               ? const Text(
-                                  'VIEW SOLUTION',
+                                  'NEXT',
                                   style: TextStyle(
                                       fontSize: 16,
                                       color: Colors.white,
@@ -252,7 +276,7 @@ class NCERTSolutionPage extends StatelessWidget {
                                           fontWeight: FontWeight.w800),
                                     )
                                   : const Text(
-                                      'NEXT',
+                                      'VIEW SOLUTION',
                                       style: TextStyle(
                                           fontSize: 16,
                                           color: Colors.white,
@@ -377,3 +401,10 @@ showDialog() {
     ),
   ));
 }
+
+// showSolution(int index) {
+//   final PolynomialVideoController controller =
+//       Get.find<PolynomialVideoController>();
+
+//   return 
+// }

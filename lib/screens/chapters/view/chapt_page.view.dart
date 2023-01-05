@@ -3,12 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:toppr1/controller/chapt.controller.dart';
 
+import '../../../controller/previous_paper_controller.dart';
 import '../../../routes/app_routes.dart';
 
 class PolynomialPage extends StatelessWidget {
   PolynomialPage({Key? key}) : super(key: key);
   final PolynomialVideoController controller =
       Get.find<PolynomialVideoController>();
+
+  PreviousQuestionPaperController myController =
+      Get.put(PreviousQuestionPaperController());
 
   @override
   Widget build(BuildContext context) {
@@ -212,7 +216,15 @@ class PolynomialPage extends StatelessWidget {
                           const SizedBox(
                             width: 35,
                           ),
-                          _buildQuickPractice(Icons.star, 'Easy'),
+                          GestureDetector(
+                              onTap: () {
+                                Get.toNamed(Routes.previousquestionpaper);
+                              },
+                              child: _buildQuickPractice(
+                                  Icons.star,
+                                  myController.previousQuestionPapers?.data
+                                          ?.pageTitle ??
+                                      'Easy')),
                           const SizedBox(
                             width: 35,
                           ),

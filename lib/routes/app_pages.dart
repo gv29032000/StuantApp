@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:toppr1/screens/chapters/widgets/video.dart';
+import 'package:toppr1/screens/previous_paper/view/previous_paper.dart';
 
 import '../screens/chapt_list/view/chapt_list.view.dart';
 import '../screens/chapters/view/chapt_detail_page.view.dart';
@@ -29,5 +30,6 @@ class AppPages {
     GetPage(name: '/maths_chapt_page', page: () => MathsChapterPage()),
     GetPage(name: '/ncert_soln', page: () => NCERTSolutionPage()),
     GetPage(name: '/crash_course', page: () => PolyCrashCoursePage()),
+    GetPage(name: '/previous-question-paper', page: () => PreviousPapperView()),
   ];
 }

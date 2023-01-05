@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'ncert_solutions.dart';
+part of 'previous_paper.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-PolyNCERTSolutions _$PolyNCERTSolutionsFromJson(Map<String, dynamic> json) =>
-    PolyNCERTSolutions(
+PreviousQuestionPapers _$PreviousQuestionPapersFromJson(
+        Map<String, dynamic> json) =>
+    PreviousQuestionPapers(
       data: json['data'] == null
           ? null
           : Data.fromJson(json['data'] as Map<String, dynamic>),
@@ -20,7 +21,8 @@ PolyNCERTSolutions _$PolyNCERTSolutionsFromJson(Map<String, dynamic> json) =>
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$PolyNCERTSolutionsToJson(PolyNCERTSolutions instance) =>
+Map<String, dynamic> _$PreviousQuestionPapersToJson(
+        PreviousQuestionPapers instance) =>
     <String, dynamic>{
       'data': instance.data,
       'status': instance.status,
@@ -89,10 +91,8 @@ Questions _$QuestionsFromJson(Map<String, dynamic> json) => Questions(
       passageHeader: json['passageHeader'] as String?,
       passageFooter: json['passageFooter'] as String?,
       assertion: json['assertion'] as String?,
-      solutionShown: json['solutionShown'] as bool?,
       reason: json['reason'] as String?,
       questionId: json['questionId'] as int?,
-      bloom: json['bloom'] as String?,
       alreadyAttempted: json['alreadyAttempted'] as bool?,
       correctlyAnswered: json['correctlyAnswered'] as bool?,
       questionImage: json['questionImage'] as String?,
@@ -101,13 +101,14 @@ Questions _$QuestionsFromJson(Map<String, dynamic> json) => Questions(
       questionStatus: json['questionStatus'] as String?,
       solution: json['solution'] as String?,
       solutionImage: json['solutionImage'] as String?,
-      solutionLinks: json['solutionLinks'] as List<dynamic>?,
-      showSolution: json['showSolution'] as bool?,
-      choices: json['choices'] as List<dynamic>?,
+      status: $enumDecodeNullable(_$AnswerStatusEnumMap, json['status']),
+      choices: (json['choices'] as List<dynamic>?)
+          ?.map((e) => Choices.fromJson(e as Map<String, dynamic>))
+          .toList(),
       multipleCorrect: json['multipleCorrect'] as bool?,
       hintAvailable: json['hintAvailable'] as bool?,
       solutionAvailable: json['solutionAvailable'] as bool?,
-      questionLinkedToId: json['questionLinkedToId'],
+      isSelected: json['isSelected'] as bool?,
       questionLinked: json['questionLinked'] as bool?,
       questionLevel: json['questionLevel'] as int?,
       questionLoIds: (json['questionLoIds'] as List<dynamic>?)
@@ -137,24 +138,20 @@ Map<String, dynamic> _$QuestionsToJson(Questions instance) => <String, dynamic>{
       'passageFooter': instance.passageFooter,
       'assertion': instance.assertion,
       'reason': instance.reason,
-      'showSolution': instance.showSolution,
       'questionId': instance.questionId,
-      'bloom': instance.bloom,
+      'isSelected': instance.isSelected,
       'alreadyAttempted': instance.alreadyAttempted,
       'correctlyAnswered': instance.correctlyAnswered,
       'questionImage': instance.questionImage,
       'hint': instance.hint,
       'hintImage': instance.hintImage,
       'questionStatus': instance.questionStatus,
-      'solutionShown': instance.solutionShown,
       'solution': instance.solution,
       'solutionImage': instance.solutionImage,
-      'solutionLinks': instance.solutionLinks,
       'choices': instance.choices,
       'multipleCorrect': instance.multipleCorrect,
       'hintAvailable': instance.hintAvailable,
       'solutionAvailable': instance.solutionAvailable,
-      'questionLinkedToId': instance.questionLinkedToId,
       'questionLinked': instance.questionLinked,
       'questionLevel': instance.questionLevel,
       'questionLoIds': instance.questionLoIds,
@@ -167,6 +164,33 @@ Map<String, dynamic> _$QuestionsToJson(Questions instance) => <String, dynamic>{
       'solutionRating': instance.solutionRating,
       'disableBookmark': instance.disableBookmark,
       'lastAttemptedOn': instance.lastAttemptedOn,
+      'status': _$AnswerStatusEnumMap[instance.status],
+    };
+
+const _$AnswerStatusEnumMap = {
+  AnswerStatus.correct: 'correct',
+  AnswerStatus.wrong: 'wrong',
+  AnswerStatus.answered: 'answered',
+  AnswerStatus.notanswered: 'notanswered',
+  AnswerStatus.selected: 'selected',
+};
+
+Choices _$ChoicesFromJson(Map<String, dynamic> json) => Choices(
+      label: json['label'] as String?,
+      choiceId: json['choiceId'] as int?,
+      choice: json['choice'] as String?,
+      image: json['image'] as String?,
+      isRight: json['isRight'] as bool?,
+      isSelect1: json['isSelect1'] as bool?,
+    );
+
+Map<String, dynamic> _$ChoicesToJson(Choices instance) => <String, dynamic>{
+      'label': instance.label,
+      'choiceId': instance.choiceId,
+      'choice': instance.choice,
+      'image': instance.image,
+      'isRight': instance.isRight,
+      'isSelect1': instance.isSelect1,
     };
 
 QuestionSet _$QuestionSetFromJson(Map<String, dynamic> json) => QuestionSet(
@@ -220,7 +244,6 @@ Subject _$SubjectFromJson(Map<String, dynamic> json) => Subject(
           ?.map((e) => e as int)
           .toList(),
       status: json['status'] as String?,
-      inSyllabusTuIds: json['inSyllabusTuIds'] as List<dynamic>?,
       inSyllabusTuV2Ids: (json['inSyllabusTuV2Ids'] as List<dynamic>?)
           ?.map((e) => e as int)
           .toList(),
@@ -234,7 +257,6 @@ Map<String, dynamic> _$SubjectToJson(Subject instance) => <String, dynamic>{
       'goalCount': instance.goalCount,
       'inSyllabusLoIds': instance.inSyllabusLoIds,
       'status': instance.status,
-      'inSyllabusTuIds': instance.inSyllabusTuIds,
       'inSyllabusTuV2Ids': instance.inSyllabusTuV2Ids,
     };
 

@@ -143,6 +143,29 @@ class PolynomialVideoController extends GetxController {
   //   }
   //   return Colors.grey.shade300;
   // }
+  var solution = false.obs;
+
+  showSolution1(int questionIndex) async {
+    Future.delayed(const Duration(milliseconds: 100), (() {
+      return ncertSolutions?.data?.questions
+          ?.elementAt(questionIndex)
+          .showSolution = true;
+    }));
+    update();
+  }
+
+  Future<bool?> solutionCall(int index) async {
+    var submitted = await showSolution1(index);
+    // isSelect.value = false;
+    update();
+    return ncertSolutions?.data?.questions?.elementAt(index).solutionShown =
+        true;
+  }
+
+  // showAnswer(int questionIndex) {
+  //   ncertSolutions?.data?.questions?.elementAt(questionIndex).showSolution =
+  //       true;
+  // }
 
   nextPage() {
     //isAnswered = false;

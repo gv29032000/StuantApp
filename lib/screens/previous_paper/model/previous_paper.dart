@@ -1,11 +1,11 @@
-// ignore_for_file: non_constant_identifier_names
-
 import 'package:json_annotation/json_annotation.dart';
 
-part 'ncert_solutions.g.dart';
+part 'previous_paper.g.dart';
+
+enum AnswerStatus { correct, wrong, answered, notanswered, selected }
 
 @JsonSerializable(createToJson: true)
-class PolyNCERTSolutions {
+class PreviousQuestionPapers {
   Data? data;
   String? status;
   int? statusCode;
@@ -13,16 +13,17 @@ class PolyNCERTSolutions {
   String? errorCode;
   Meta? meta;
 
-  PolyNCERTSolutions(
+  PreviousQuestionPapers(
       {this.data,
       this.status,
       this.statusCode,
       this.message,
       this.errorCode,
       this.meta});
-  factory PolyNCERTSolutions.fromJson(Map<String, dynamic> Json) =>
-      _$PolyNCERTSolutionsFromJson(Json);
-  Map<String, dynamic> toJson() => _$PolyNCERTSolutionsToJson(this);
+
+  factory PreviousQuestionPapers.fromJson(Map<String, dynamic> Json) =>
+      _$PreviousQuestionPapersFromJson(Json);
+  Map<String, dynamic> toJson() => _$PreviousQuestionPapersToJson(this);
 }
 
 @JsonSerializable(createToJson: true)
@@ -63,6 +64,7 @@ class Data {
       this.chapter,
       this.tab,
       this.activePage});
+
   factory Data.fromJson(Map<String, dynamic> Json) => _$DataFromJson(Json);
   Map<String, dynamic> toJson() => _$DataToJson(this);
 }
@@ -78,24 +80,22 @@ class Questions {
   String? passageFooter;
   String? assertion;
   String? reason;
-  bool? showSolution;
   int? questionId;
-  String? bloom;
+  bool? isSelected;
   bool? alreadyAttempted;
   bool? correctlyAnswered;
   String? questionImage;
   String? hint;
   String? hintImage;
   String? questionStatus;
-  bool? solutionShown;
   String? solution;
   String? solutionImage;
-  List<dynamic>? solutionLinks;
-  List<dynamic>? choices;
+  // List<Null>? solutionLinks;
+  List<Choices>? choices;
   bool? multipleCorrect;
   bool? hintAvailable;
   bool? solutionAvailable;
-  dynamic questionLinkedToId;
+  // Null? questionLinkedToId;
   bool? questionLinked;
   int? questionLevel;
   List<int>? questionLoIds;
@@ -108,6 +108,7 @@ class Questions {
   int? solutionRating;
   bool? disableBookmark;
   String? lastAttemptedOn;
+  AnswerStatus? status;
 
   Questions(
       {this.isBookmarked,
@@ -118,10 +119,8 @@ class Questions {
       this.passageHeader,
       this.passageFooter,
       this.assertion,
-      this.solutionShown,
       this.reason,
       this.questionId,
-      this.bloom,
       this.alreadyAttempted,
       this.correctlyAnswered,
       this.questionImage,
@@ -130,13 +129,14 @@ class Questions {
       this.questionStatus,
       this.solution,
       this.solutionImage,
-      this.solutionLinks,
-      this.showSolution,
+      this.status,
+      // this.solutionLinks,
       this.choices,
       this.multipleCorrect,
       this.hintAvailable,
       this.solutionAvailable,
-      this.questionLinkedToId,
+      // this.questionLinkedToId,
+      this.isSelected,
       this.questionLinked,
       this.questionLevel,
       this.questionLoIds,
@@ -149,9 +149,32 @@ class Questions {
       this.solutionRating,
       this.disableBookmark,
       this.lastAttemptedOn});
+
   factory Questions.fromJson(Map<String, dynamic> Json) =>
       _$QuestionsFromJson(Json);
   Map<String, dynamic> toJson() => _$QuestionsToJson(this);
+}
+
+@JsonSerializable(createToJson: true)
+class Choices {
+  String? label;
+  int? choiceId;
+  String? choice;
+  String? image;
+  bool? isRight;
+  bool? isSelect1;
+
+  Choices(
+      {this.label,
+      this.choiceId,
+      this.choice,
+      this.image,
+      this.isRight,
+      this.isSelect1});
+
+  factory Choices.fromJson(Map<String, dynamic> Json) =>
+      _$ChoicesFromJson(Json);
+  Map<String, dynamic> toJson() => _$ChoicesToJson(this);
 }
 
 @JsonSerializable(createToJson: true)
@@ -160,6 +183,7 @@ class QuestionSet {
   String? slug;
 
   QuestionSet({this.name, this.slug});
+
   factory QuestionSet.fromJson(Map<String, dynamic> Json) =>
       _$QuestionSetFromJson(Json);
   Map<String, dynamic> toJson() => _$QuestionSetToJson(this);
@@ -179,6 +203,7 @@ class Filters {
       this.options,
       this.isMultiSelect,
       this.allowGroupDisable});
+
   factory Filters.fromJson(Map<String, dynamic> Json) =>
       _$FiltersFromJson(Json);
   Map<String, dynamic> toJson() => _$FiltersToJson(this);
@@ -191,6 +216,7 @@ class Options {
   int? count;
 
   Options({this.label, this.key, this.count});
+
   factory Options.fromJson(Map<String, dynamic> Json) =>
       _$OptionsFromJson(Json);
   Map<String, dynamic> toJson() => _$OptionsToJson(this);
@@ -205,7 +231,7 @@ class Subject {
   int? goalCount;
   List<int>? inSyllabusLoIds;
   String? status;
-  List<dynamic>? inSyllabusTuIds;
+  // List<Null>? inSyllabusTuIds;
   List<int>? inSyllabusTuV2Ids;
 
   Subject(
@@ -216,8 +242,9 @@ class Subject {
       this.goalCount,
       this.inSyllabusLoIds,
       this.status,
-      this.inSyllabusTuIds,
+      // this.inSyllabusTuIds,
       this.inSyllabusTuV2Ids});
+
   factory Subject.fromJson(Map<String, dynamic> Json) =>
       _$SubjectFromJson(Json);
   Map<String, dynamic> toJson() => _$SubjectToJson(this);
@@ -255,6 +282,7 @@ class Chapter {
       this.inSyllabusTuV2Ids,
       this.hasQuestionSets,
       this.hasReport});
+
   factory Chapter.fromJson(Map<String, dynamic> Json) =>
       _$ChapterFromJson(Json);
   Map<String, dynamic> toJson() => _$ChapterToJson(this);
@@ -263,6 +291,7 @@ class Chapter {
 @JsonSerializable(createToJson: true)
 class Meta {
   Meta({dynamic});
+
   factory Meta.fromJson(Map<String, dynamic> Json) => _$MetaFromJson(Json);
   Map<String, dynamic> toJson() => _$MetaToJson(this);
 }

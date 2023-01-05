@@ -11,4 +11,5 @@ abstract class Routes {
   static const mathschaptpage = '/maths_chapt_page';
   static const ncertsoln = '/ncert_soln';
   static const crashcourse = '/crash_course';
+  static const previousquestionpaper = '/previous-question-paper';
 }
