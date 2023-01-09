@@ -1,4 +1,3 @@
-// ignore_for_file: unnecessary_overrides, unrelated_type_equality_checks, use_function_type_syntax_for_parameters
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -25,12 +24,13 @@ class PolynomialVideoController extends GetxController {
 
   // var polyVideos = <PolynomialVideos>[].obs;
   PageController pageController = PageController();
-
+  int index123 = 0;
   final customTileExpanded = true.obs;
   final customTileExpanded1 = true.obs;
   final eg = false.obs;
   final bkmark = false.obs;
   final find = false.obs;
+  int listIndex = 0;
   RxInt currIndex = 0.obs;
   RxList<Questions1> questions = <Questions1>[].obs;
 
@@ -43,6 +43,11 @@ class PolynomialVideoController extends GetxController {
   //   selectedAns = selectedIndex;
   //   print('hii $correctAnsIndex');
   // }
+  void updateIndex(int newIndex) {
+    listIndex = newIndex;
+    print('subi...subi $listIndex');
+    update();
+  }
 
   RxInt selectedOptionIndex = 5.obs;
   RxInt selectedQnIndex = 0.obs;
@@ -146,7 +151,7 @@ class PolynomialVideoController extends GetxController {
   var solution = false.obs;
 
   showSolution1(int questionIndex) async {
-    Future.delayed(const Duration(milliseconds: 100), (() {
+    Future.delayed(const Duration(milliseconds: 5), (() {
       return ncertSolutions?.data?.questions
           ?.elementAt(questionIndex)
           .showSolution = true;
@@ -155,8 +160,8 @@ class PolynomialVideoController extends GetxController {
   }
 
   Future<bool?> solutionCall(int index) async {
-    var submitted = await showSolution1(index);
-    // isSelect.value = false;
+    await showSolution1(index);
+
     update();
     return ncertSolutions?.data?.questions?.elementAt(index).solutionShown =
         true;

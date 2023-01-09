@@ -249,7 +249,7 @@ class PreviousQuestionPaperController extends GetxController {
         await rootBundle.loadString('json/maths/previous_paper.json');
     previousQuestionPapers =
         PreviousQuestionPapers.fromJson(jsonDecode(response));
-    print(response);
+
     update();
   }
 }
