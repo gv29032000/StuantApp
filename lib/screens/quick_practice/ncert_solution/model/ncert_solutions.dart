@@ -79,6 +79,7 @@ class Questions {
   String? assertion;
   String? reason;
   bool? showSolution;
+  bool? solutionShown;
   int? questionId;
   String? bloom;
   bool? alreadyAttempted;
@@ -87,7 +88,6 @@ class Questions {
   String? hint;
   String? hintImage;
   String? questionStatus;
-  bool? solutionShown;
   String? solution;
   String? solutionImage;
   List<dynamic>? solutionLinks;

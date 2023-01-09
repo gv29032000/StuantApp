@@ -102,6 +102,13 @@ Questions _$QuestionsFromJson(Map<String, dynamic> json) => Questions(
       solution: json['solution'] as String?,
       solutionImage: json['solutionImage'] as String?,
       status: $enumDecodeNullable(_$AnswerStatusEnumMap, json['status']),
+      selectedAns:
+          (json['selectedAns'] as List<dynamic>?)?.map((e) => e as int).toSet(),
+      attemptedAnswer: (json['attemptedAnswer'] as List<dynamic>?)
+          ?.map((e) => e as bool)
+          .toList(),
+      showSolution: json['showSolution'] as bool?,
+      solutionShown: json['solutionShown'] as bool?,
       choices: (json['choices'] as List<dynamic>?)
           ?.map((e) => Choices.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -164,7 +171,11 @@ Map<String, dynamic> _$QuestionsToJson(Questions instance) => <String, dynamic>{
       'solutionRating': instance.solutionRating,
       'disableBookmark': instance.disableBookmark,
       'lastAttemptedOn': instance.lastAttemptedOn,
+      'showSolution': instance.showSolution,
+      'solutionShown': instance.solutionShown,
       'status': _$AnswerStatusEnumMap[instance.status],
+      'selectedAns': instance.selectedAns?.toList(),
+      'attemptedAnswer': instance.attemptedAnswer,
     };
 
 const _$AnswerStatusEnumMap = {

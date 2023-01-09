@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tex/flutter_tex.dart';
 import 'package:get/get.dart';
+import 'package:toppr1/controller/chapt.controller.dart';
 import 'package:toppr1/controller/previous_paper_controller.dart';
 import 'package:toppr1/screens/previous_paper/model/previous_paper.dart';
 import 'package:toppr1/screens/previous_paper/widgets/answer_option.dart';
@@ -9,6 +10,8 @@ import 'package:toppr1/screens/previous_paper/widgets/build_text.dart';
 class PreviousPapperView extends StatelessWidget {
   PreviousPapperView({super.key});
   PreviousQuestionPaperController myController = Get.find();
+  final PolynomialVideoController controller =
+      Get.find<PolynomialVideoController>();
 
   @override
   Widget build(BuildContext context) {
@@ -45,150 +48,481 @@ class PreviousPapperView extends StatelessWidget {
           weight: FontWeight.w500,
         ),
       ),
-      body: PageView.builder(
-        controller: myController.pageController,
-        itemCount: myController.previousQuestionPapers?.data?.questions?.length,
-        itemBuilder: (BuildContext context, int index) {
-          return GetBuilder<PreviousQuestionPaperController>(
-              init: PreviousQuestionPaperController(),
-              builder: (_) {
-                return SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      const SizedBox(
-                        height: 40,
-                      ),
-                      Row(
+      body: Stack(
+        children: [
+          PageView.builder(
+            controller: myController.pageController,
+            onPageChanged: (value) {
+              myController.questionIndex.value = value;
+            },
+            itemCount:
+                myController.previousQuestionPapers?.data?.questions?.length,
+            itemBuilder: (BuildContext context, int index) {
+              return GetBuilder<PreviousQuestionPaperController>(
+                  init: PreviousQuestionPaperController(),
+                  builder: (_) {
+                    return SingleChildScrollView(
+                      child: Column(
                         children: [
                           const SizedBox(
-                            width: 10,
+                            height: 40,
                           ),
-                          Container(
-                            height: 25,
-                            width: 25,
-                            decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(4)),
-                            child: Center(
-                              child: Text(
-                                index < 9 ? '0${index + 1}' : '${(index + 1)}',
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.bold),
+                          Row(
+                            children: [
+                              const SizedBox(
+                                width: 10,
                               ),
-                            ),
-                          ),
-                          const Spacer(),
-                          GestureDetector(
-                            onTap: () {},
-                            child: const Icon(
-                              Icons.report_problem_outlined,
-                              size: 18,
-                            ),
+                              Container(
+                                height: 25,
+                                width: 25,
+                                decoration: BoxDecoration(
+                                    color: Colors.grey[300],
+                                    borderRadius: BorderRadius.circular(4)),
+                                child: Center(
+                                  child: Text(
+                                    index < 9
+                                        ? '0${index + 1}'
+                                        : '${(index + 1)}',
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                              const Spacer(),
+                              GestureDetector(
+                                onTap: () {},
+                                child: const Icon(
+                                  Icons.report_problem_outlined,
+                                  size: 18,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const SizedBox(
+                                height: 18,
+                                child: VerticalDivider(
+                                  width: 10,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              IconButton(
+                                onPressed: () {
+                                  myController.addBookMark(index);
+                                },
+                                icon:
+                                    // !controller.bookmarkSelected.value
+                                    //     ? const Icon(Icons.bookmark_border)
+                                    //     :
+                                    myController.previousQuestionPapers?.data
+                                                ?.questions
+                                                ?.elementAt(index)
+                                                .isBookmarked ==
+                                            true
+                                        ? Icon(Icons.bookmark,
+                                            color: Colors.blue.shade200)
+                                        : const Icon(
+                                            Icons.bookmark_border_outlined,
+                                          ),
+                              ),
+                            ],
                           ),
                           const SizedBox(
-                            width: 10,
+                            height: 10,
+                          ),
+                          TeXView(
+                            child: TeXViewDocument(myController
+                                    .previousQuestionPapers?.data?.questions
+                                    ?.elementAt(index)
+                                    .question ??
+                                ''),
                           ),
                           const SizedBox(
-                            height: 18,
-                            child: VerticalDivider(
-                              width: 10,
-                              color: Colors.black,
-                            ),
+                            height: 30,
                           ),
-                          IconButton(
-                            onPressed: () {},
-                            icon:
-                                // !controller.bookmarkSelected.value
-                                //     ? const Icon(Icons.bookmark_border)
-                                //     :
-                                Icon(
-                              Icons.bookmark,
-                              color: Colors.blue.shade200,
-                            ),
+                          SizedBox(
+                            height: 360,
+                            child: myController
+                                        .previousQuestionPapers?.data?.questions
+                                        ?.elementAt(index)
+                                        .solutionShown ==
+                                    true
+                                ? ListView.builder(
+                                    itemCount: myController
+                                        .previousQuestionPapers?.data?.questions
+                                        ?.elementAt(index)
+                                        .choices
+                                        ?.length,
+                                    itemBuilder:
+                                        (BuildContext context, int index1) {
+                                      AnswerStatus status =
+                                          AnswerStatus.notanswered;
+                                      if (myController.previousQuestionPapers
+                                                  ?.data?.questions
+                                                  ?.elementAt(index)
+                                                  .correctlyAnswered ==
+                                              true &&
+                                          myController.previousQuestionPapers
+                                                  ?.data?.questions
+                                                  ?.elementAt(index)
+                                                  .choices
+                                                  ?.elementAt(index1)
+                                                  .choiceId ==
+                                              myController.selectedId.value) {
+                                        status = AnswerStatus.correct;
+                                      } else if (myController
+                                              .previousQuestionPapers
+                                              ?.data
+                                              ?.questions
+                                              ?.elementAt(index)
+                                              .choices
+                                              ?.elementAt(index1)
+                                              .isRight ==
+                                          true) {
+                                        status = AnswerStatus.correct;
+                                      } else if (myController
+                                                      .selectedAnsId.value !=
+                                                  myController
+                                                      .selectedId.value &&
+                                              myController
+                                                      .previousQuestionPapers
+                                                      ?.data
+                                                      ?.questions
+                                                      ?.elementAt(index)
+                                                      .choices
+                                                      ?.elementAt(index1)
+                                                      .choiceId ==
+                                                  myController
+                                                      .selectedId.value &&
+                                              myController
+                                                      .previousQuestionPapers
+                                                      ?.data
+                                                      ?.questions
+                                                      ?.elementAt(index)
+                                                      .solutionShown ==
+                                                  true ||
+                                          myController.previousQuestionPapers
+                                                  ?.data?.questions
+                                                  ?.elementAt(index)
+                                                  .attemptedAnswer
+                                                  ?.elementAt(index1) ==
+                                              true) {
+                                        status = AnswerStatus.wrong;
+                                      } else if (myController
+                                              .previousQuestionPapers
+                                              ?.data
+                                              ?.questions
+                                              ?.elementAt(index)
+                                              .choices
+                                              ?.elementAt(index1)
+                                              .choiceId !=
+                                          myController.selectedAnsId.value) {
+                                        return NotAnswerCard(
+                                            status: status,
+                                            questionIndex: index,
+                                            ansIndex: index1,
+                                            onPressed: () {});
+                                      }
+                                      return NotAnswerCard(
+                                          status: status,
+                                          questionIndex: index,
+                                          ansIndex: index1,
+                                          onPressed: () {});
+                                    })
+                                : ListView.builder(
+                                    physics:
+                                        const NeverScrollableScrollPhysics(),
+                                    itemCount: myController
+                                        .previousQuestionPapers?.data?.questions
+                                        ?.elementAt(index)
+                                        .choices
+                                        ?.length,
+                                    itemBuilder:
+                                        (BuildContext context, int index1) {
+                                      AnswerStatus status =
+                                          AnswerStatus.notanswered;
+                                      if (myController.previousQuestionPapers
+                                                  ?.data?.questions
+                                                  ?.elementAt(index)
+                                                  .choices
+                                                  ?.elementAt(index1)
+                                                  .isSelect1 ==
+                                              true &&
+                                          questions
+                                                  ?.elementAt(index)
+                                                  .attemptedAnswer
+                                                  ?.elementAt(index1) ==
+                                              true) {
+                                        status = AnswerStatus.selected;
+                                        myController.status.value =
+                                            AnswerStatus.answered;
+                                      }
+                                      return AnswerOption(
+                                          status: status,
+                                          questionId: questions
+                                                  ?.elementAt(index)
+                                                  .questionId ??
+                                              0,
+                                          questionIndex: index,
+                                          ansIndex: index1,
+                                          onPressed: () {
+                                            print(
+                                                'hello${questions?.elementAt(index).selectedAns}');
+
+                                            questions
+                                                ?.elementAt(index)
+                                                .selectedAns
+                                                ?.add(index1);
+                                            myController.selectedOptionIndex
+                                                .value = index1;
+                                            myController.selectedAnswer(
+                                              index1,
+                                              index,
+                                            );
+                                          });
+                                    }),
                           ),
+                          myController.previousQuestionPapers?.data?.questions
+                                      ?.elementAt(index)
+                                      .solutionShown ==
+                                  true
+                              ? GetBuilder<PreviousQuestionPaperController>(
+                                  builder: (_) {
+                                  return Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.lightGreen.shade50,
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(15.0),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'SOLUTION',
+                                            style: TextStyle(
+                                                letterSpacing: 0.5,
+                                                color: Colors
+                                                    .lightGreenAccent.shade700,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          const SizedBox(
+                                            height: 10,
+                                          ),
+                                          TeXView(
+                                            child: TeXViewDocument(
+                                              myController
+                                                      .previousQuestionPapers
+                                                      ?.data
+                                                      ?.questions
+                                                      ?.elementAt(index)
+                                                      .solution ??
+                                                  '',
+                                              style: TeXViewStyle(
+                                                contentColor:
+                                                    Colors.grey.shade800,
+                                                fontStyle: TeXViewFontStyle(
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        TeXViewFontWeight.w400),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  );
+                                })
+                              : const SizedBox(),
                         ],
                       ),
-                      const SizedBox(
-                        height: 10,
+                    );
+                  });
+            },
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              height: 90,
+              color: Colors.white,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        myController.prevPage();
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(color: Colors.grey.shade400),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Icon(
+                            Icons.arrow_back,
+                            size: 28,
+                            color: Colors.grey.shade500,
+                          ),
+                        ),
                       ),
-                      TeXView(
-                          child: TeXViewDocument(myController
+                    ),
+                    Obx(() {
+                      return ElevatedButton(
+                        onPressed: () {
+                          if (myController
                                   .previousQuestionPapers?.data?.questions
-                                  ?.elementAt(index)
-                                  .question ??
-                              '')),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      SizedBox(
-                        height: 360,
-                        child: ListView.builder(
-                            physics: const NeverScrollableScrollPhysics(),
-                            itemCount: myController
-                                .previousQuestionPapers?.data?.questions
-                                ?.elementAt(index)
-                                .choices
-                                ?.length,
-                            itemBuilder: (BuildContext context, int index1) {
-                              AnswerStatus status = AnswerStatus.notanswered;
-                              // if (myController.currentansIndex.value == index1 &&
-                              //     myController.questionAttempted[index] == true) {
-                              //   status = AnswerStatus.selected;
-                              // }
-                              return AnswerOption(
-                                  status: status,
-                                  questionId:
-                                      questions?.elementAt(index).questionId ??
-                                          0,
-                                  questionIndex: index,
-                                  ansIndex: index1,
-                                  onPressed: () {
-                                    myController.selectedOptionIndex.value =
-                                        index1;
-                                    myController.selectedAnswer(
-                                      index1,
-                                      index,
-                                    );
-                                    // myController.checkAnswer(
-                                    //     index, myController.question);
-                                    // myController.onPressedColor(index);
-                                  });
-                            }),
-                      ),
-                      // ColoredBox(
-                      //   color: Theme.of(context).scaffoldBackgroundColor,
-                      //   child: Padding(
-                      //     padding: const EdgeInsets.all(10),
-                      //     child: Row(
-                      //       children: [
-                      //         SizedBox(
-                      //           height: 55,
-                      //           width: 55,
-                      //           child: IconButton(
-                      //             onPressed: () {},
-                      //             icon: const Icon(Icons.arrow_back_ios_new),
-                      //           ),
-                      //         ),
-                      //         const SizedBox(
-                      //           width: 5,
-                      //         ),
-                      //         Expanded(
-                      //           child: ElevatedButton(
-                      //             onPressed: () {
-                      //               // controller.nextQuestion();
-                      //             },
-                      //             child: const Text('Next'),
-                      //           ),
-                      //         )
-                      //       ],
-                      //     ),
-                      //   ),
-                      // )
-                    ],
-                  ),
-                );
-              });
-        },
+                                  ?.elementAt(myController.questionIndex.value)
+                                  .choices
+                                  ?.elementAt(
+                                      myController.currentansIndex.value)
+                                  .isSelect1 ==
+                              false) {
+                            myController.nextPage();
+                          }
+                          if (myController
+                                  .previousQuestionPapers?.data?.questions
+                                  ?.elementAt(myController.questionIndex.value)
+                                  .choices
+                                  ?.elementAt(
+                                      myController.currentansIndex.value)
+                                  .isSelect1 ==
+                              true) {
+                            myController
+                                .viewSolution(myController.questionIndex.value);
+                            myController.checkAnswer(
+                                myController.questionIndex.value,
+                                questions
+                                        ?.elementAt(
+                                            myController.questionIndex.value)
+                                        .choices
+                                        ?.elementAt(
+                                            myController.currentansIndex.value)
+                                        .choiceId ??
+                                    0);
+                            myController.previousQuestionPapers?.data?.questions
+                                        ?.elementAt(
+                                            myController.questionIndex.value)
+                                        .solutionShown ==
+                                    true
+                                ? myController.nextPage()
+                                : myController.solutionCall(
+                                    myController.questionIndex.value);
+                          }
+
+                          // if (myController
+                          //         .previousQuestionPapers?.data?.questions
+                          //         ?.elementAt(myController.questionIndex.value)
+                          //         .showSolution ==
+                          //     true) {
+                          //   myController.previousQuestionPapers?.data?.questions
+                          //               ?.elementAt(
+                          //                   myController.questionIndex.value)
+                          //               .solutionShown ==
+                          //           true
+                          //       ? myController.nextPage()
+                          //       : myController.solutionCall(
+                          //           myController.questionIndex.value);
+                          // }
+                        },
+                        style: ElevatedButton.styleFrom(
+                          elevation: 0,
+                          side: BorderSide(
+                            color: myController
+                                        .previousQuestionPapers?.data?.questions
+                                        ?.elementAt(
+                                            myController.questionIndex.value)
+                                        .solutionShown ==
+                                    true
+                                ? const Color(0xff7ED321)
+                                : myController.previousQuestionPapers?.data
+                                            ?.questions
+                                            ?.elementAt(myController
+                                                .questionIndex.value)
+                                            .choices
+                                            ?.elementAt(myController
+                                                .selectedOptionIndex.value)
+                                            .isSelect1 ==
+                                        true
+                                    ? Colors.lightBlue.shade300
+                                    : Colors.grey.shade300,
+                          ),
+                          minimumSize: const Size(270, 50),
+                          shape: const StadiumBorder(),
+                          backgroundColor: myController
+                                      .previousQuestionPapers?.data?.questions
+                                      ?.elementAt(
+                                          myController.questionIndex.value)
+                                      .solutionShown ==
+                                  true
+                              ? const Color(0xff7ED321)
+                              : myController.previousQuestionPapers?.data
+                                          ?.questions
+                                          ?.elementAt(
+                                              myController.questionIndex.value)
+                                          .choices
+                                          ?.elementAt(myController
+                                              .selectedOptionIndex.value)
+                                          .isSelect1 ==
+                                      true
+                                  ? Colors.lightBlue.shade300
+                                  : Colors.white,
+                        ),
+                        child: myController
+                                    .previousQuestionPapers?.data?.questions
+                                    ?.elementAt(
+                                        myController.questionIndex.value)
+                                    .solutionShown ==
+                                true
+                            ? const Text(
+                                'NEXT',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w800),
+                              )
+                            : myController
+                                        .previousQuestionPapers?.data?.questions
+                                        ?.elementAt(
+                                            myController.questionIndex.value)
+                                        .choices
+                                        ?.elementAt(myController
+                                            .selectedOptionIndex.value)
+                                        .isSelect1 ==
+                                    true
+                                ? const Text(
+                                    'SUBMIT',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w800),
+                                  )
+                                : controller.currIndex.value == 9
+                                    ? const Text(
+                                        'FINISH',
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w800),
+                                      )
+                                    : Text(
+                                        'SKIP',
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.grey.shade500,
+                                            fontWeight: FontWeight.w800),
+                                      ),
+                      );
+                    }),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

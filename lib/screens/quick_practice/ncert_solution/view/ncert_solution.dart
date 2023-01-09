@@ -134,48 +134,51 @@ class NCERTSolutionPage extends StatelessWidget {
                                         ?.elementAt(index)
                                         .solutionShown ==
                                     true
-                                ? Container(
-                                    decoration: BoxDecoration(
-                                        color: Colors.lightGreen.shade50,
-                                        borderRadius:
-                                            BorderRadius.circular(10)),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(15.0),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            'SOLUTION',
-                                            style: TextStyle(
-                                                letterSpacing: 0.5,
-                                                color: Colors
-                                                    .lightGreenAccent.shade700,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                          const SizedBox(
-                                            height: 10,
-                                          ),
-                                          TeXView(
-                                            child: TeXViewDocument(
-                                                controller.ncertSolutions?.data
-                                                        ?.questions
-                                                        ?.elementAt(index)
-                                                        .solution ??
-                                                    '',
-                                                style: TeXViewStyle(
-                                                    contentColor:
-                                                        Colors.grey.shade800,
-                                                    fontStyle: TeXViewFontStyle(
-                                                        fontSize: 14,
-                                                        fontWeight:
-                                                            TeXViewFontWeight
-                                                                .w400))),
-                                          ),
-                                        ],
+                                ? GetBuilder<PolynomialVideoController>(
+                                    builder: (_) {
+                                    return Container(
+                                      decoration: BoxDecoration(
+                                          color: Colors.lightGreen.shade50,
+                                          borderRadius:
+                                              BorderRadius.circular(10)),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(15.0),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'SOLUTION',
+                                              style: TextStyle(
+                                                  letterSpacing: 0.5,
+                                                  color: Colors.lightGreenAccent
+                                                      .shade700,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                            TeXView(
+                                              child: TeXViewDocument(
+                                                  controller.ncertSolutions
+                                                          ?.data?.questions
+                                                          ?.elementAt(index)
+                                                          .solution ??
+                                                      '',
+                                                  style: TeXViewStyle(
+                                                      contentColor:
+                                                          Colors.grey.shade800,
+                                                      fontStyle: TeXViewFontStyle(
+                                                          fontSize: 14,
+                                                          fontWeight:
+                                                              TeXViewFontWeight
+                                                                  .w400))),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                  )
+                                    );
+                                  })
                                 : const SizedBox(),
                           ],
                         ),

@@ -27,6 +27,7 @@
                 "hint": "",
                 "hint_image": "",
                 "showSolution": false,
+                "solutionShown": false,
                 "question_status": "published",
                 "solution": "<span>The given statement is incorrect as the equality of the LHS and RHS of the equation cannot be determined and is not applicable for all the values of $$x$$ and $$y$$..</span><br/><span>The correct statement will be:</span><br/><span>$$2x+ 3y = 2x+ 3y$$</span>",
                 "solution_image": "",
@@ -36,7 +37,6 @@
                 "hint_available": false,
                 "solution_available": true,
                 "question_linked_to_id": null,
-                "solutionShown": false,
                 "question_linked": false,
                 "question_level": 2,
                 "question_lo_ids": [

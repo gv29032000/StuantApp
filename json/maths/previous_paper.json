@@ -17,6 +17,8 @@
                 "passage_image": "",
                 "passage_header": "",
                 "passage_footer": "",
+                "showSolution": false,
+                "solutionShown": false,
                 "assertion": "",
                 "reason": "",
                 "questionId": 476724,
@@ -30,34 +32,41 @@
                 "solution": "<table class=\"table table-bordered\"><tbody><tr><td>$$p$$</td><td>$$q$$&#160;</td><td>$$\\sim p$$&#160;</td><td>$$\\sim p \\wedge q$$&#160;</td><td>&#160;<span>$$p \\rightarrow q$$&#160;</span></td><td><span>$$q \\rightarrow p$$&#160;</span>&#160;</td><td>&#160;$$\\sim (p \\rightarrow q)$$</td><td>&#160;<span>$$\\sim (q \\rightarrow p)$$</span></td></tr><tr><td>T</td><td>T&#160;</td><td>F&#160;</td><td>F&#160;</td><td>T&#160;</td><td>T&#160;</td><td>F&#160;</td><td>F&#160;</td></tr><tr><td>T</td><td>F&#160;</td><td>F&#160;</td><td>F&#160;</td><td>F&#160;</td><td>T&#160;</td><td>T&#160;</td><td>F&#160;</td></tr><tr><td>F</td><td>T</td><td>T&#160;</td><td>T&#160;</td><td>T&#160;</td><td>&#160;F</td><td>F&#160;</td><td>T&#160;</td></tr><tr><td>F</td><td>F&#160;</td><td>T&#160;</td><td>F&#160;</td><td>T&#160;</td><td>T&#160;</td><td>F&#160;</td><td>F&#160;</td></tr></tbody></table>So, Column no. 4 and column no. 8 have the same truth values.<div>So, option D is correct.</div>",
                 "solution_image": "",
                 "solution_links": [],
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
                 "choices": [
                     {
                         "label": "A",
-                        "choice_id": 1700600,
+                        "choiceId": 1700600,
                         "choice": "$$\\displaystyle p\\rightarrow q$$",
                         "image": "",
-                        "is_right": false
+                        "isRight": false
                     },
                     {
                         "label": "B",
-                        "choice_id": 1700601,
+                        "choiceId": 1700601,
                         "choice": "$$\\displaystyle q\\rightarrow p$$",
                         "image": "",
-                        "is_right": false
+                        "isRight": false
                     },
                     {
                         "label": "C",
-                        "choice_id": 1700602,
+                        "choiceId": 1700602,
                         "choice": "$$\\displaystyle \\sim \\left( p \\rightarrow q \\right)$$",
                         "image": "",
-                        "is_right": false
+                        "isRight": false
                     },
                     {
                         "label": "D",
-                        "choice_id": 1700603,
+                        "choiceId": 1700603,
                         "choice": "$$\\displaystyle \\sim (q\\rightarrow p)$$",
                         "image": "",
-                        "is_right": true
+                        "isRight": true
                     }
                 ],
                 "multiple_correct": false,
@@ -90,6 +99,15 @@
                 "passage": "",
                 "passage_image": "",
                 "isSelected": false,
+                "showSolution": false,
+                "solutionShown": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
                 "passage_header": "",
                 "passage_footer": "",
                 "assertion": "",
@@ -107,34 +125,34 @@
                 "choices": [
                     {
                         "label": "A",
-                        "choice_id": 124846,
+                        "choiceId": 124846,
                         "choice": "Statement I is True; Statement II is true; Statement II is not a correct explanation for Statement I",
                         "image": "",
-                        "is_right": true,
+                        "isRight": true,
                         "isSelect1": false
                     },
                     {
                         "label": "B",
-                        "choice_id": 124847,
+                        "choiceId": 124847,
                         "choice": "Statement I is True; Statement II is False",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     },
                     {
                         "label": "C",
-                        "choice_id": 124848,
+                        "choiceId": 124848,
                         "choice": "Statement I is False; Statement II is True",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     },
                     {
                         "label": "D",
-                        "choice_id": 124849,
+                        "choiceId": 124849,
                         "choice": "Statement I is True; Statement II is True; Statement II is a correct explanation for Statement I",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     }
                 ],
@@ -167,6 +185,15 @@
                 "question_style": "single correct",
                 "passage": "",
                 "passage_image": "",
+                "showSolution": false,
+                "solutionShown": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
                 "passage_header": "",
                 "isSelected": false,
                 "passage_footer": "",
@@ -185,34 +212,34 @@
                 "choices": [
                     {
                         "label": "A",
-                        "choice_id": 1696557,
+                        "choiceId": 1696557,
                         "choice": "$$a + b$$",
                         "image": "",
-                        "is_right": true,
+                        "isRight": true,
                         "isSelect1": false
                     },
                     {
                         "label": "B",
-                        "choice_id": 1696558,
+                        "choiceId": 1696558,
                         "choice": "$$a - b$$",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     },
                     {
                         "label": "C",
-                        "choice_id": 1696559,
+                        "choiceId": 1696559,
                         "choice": "$$a^3+b^3$$",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     },
                     {
                         "label": "D",
-                        "choice_id": 1696560,
+                        "choiceId": 1696560,
                         "choice": "$$a^2+b^2$$",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     }
                 ],
@@ -245,6 +272,15 @@
                 "passage": "",
                 "passage_image": "",
                 "passage_header": "",
+                "showSolution": false,
+                "solutionShown": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
                 "passage_footer": "",
                 "assertion": "",
                 "reason": "",
@@ -262,34 +298,34 @@
                 "choices": [
                     {
                         "label": "A",
-                        "choice_id": 1648585,
+                        "choiceId": 1648585,
                         "choice": "$$a+b = c+d$$",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     },
                     {
                         "label": "B",
-                        "choice_id": 1648586,
+                        "choiceId": 1648586,
                         "choice": "$$a-b=c-d$$",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     },
                     {
                         "label": "C",
-                        "choice_id": 1648587,
+                        "choiceId": 1648587,
                         "choice": "$$a+b=c+d, a^2+b^2=c^2+d^2$$",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     },
                     {
                         "label": "D",
-                        "choice_id": 1648588,
+                        "choiceId": 1648588,
                         "choice": "$$a-b=c-d, a^2-b^2=c^2-d^2$$",
                         "image": "",
-                        "is_right": true,
+                        "isRight": true,
                         "isSelect1": false
                     }
                 ],
@@ -320,6 +356,15 @@
                 "question_image": "",
                 "hint_available": false,
                 "passage_footer": "",
+                "showSolution": false,
+                "solutionShown": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
                 "question_linked_to_id": null,
                 "isSelected": false,
                 "assertion": "",
@@ -346,32 +391,32 @@
                 "solution": "",
                 "choices": [
                     {
-                        "is_right": true,
-                        "choice_id": 428317,
+                        "isRight": true,
+                        "choiceId": 428317,
                         "choice": "equivalent to $$ p\\leftrightarrow q$$",
                         "image": "",
                         "label": "A",
                         "isSelect1": false
                     },
                     {
-                        "is_right": false,
-                        "choice_id": 428318,
+                        "isRight": false,
+                        "choiceId": 428318,
                         "choice": "equivalent to $$ \\sim p\\leftrightarrow q$$",
                         "image": "",
                         "label": "B",
                         "isSelect1": false
                     },
                     {
-                        "is_right": false,
-                        "choice_id": 428319,
+                        "isRight": false,
+                        "choiceId": 428319,
                         "choice": "a tautology",
                         "image": "",
                         "label": "C",
                         "isSelect1": false
                     },
                     {
-                        "is_right": false,
-                        "choice_id": 428320,
+                        "isRight": false,
+                        "choiceId": 428320,
                         "choice": "a fallacy",
                         "image": "",
                         "label": "D",
@@ -398,6 +443,15 @@
                 "assertion": "",
                 "reason": "",
                 "questionId": 470170,
+                "showSolution": false,
+                "solutionShown": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
                 "already_attempted": false,
                 "correctly_answered": false,
                 "question_image": "",
@@ -410,34 +464,34 @@
                 "choices": [
                     {
                         "label": "A",
-                        "choice_id": 1675520,
+                        "choiceId": 1675520,
                         "choice": "Tautology and contradiction",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     },
                     {
                         "label": "B",
-                        "choice_id": 1675521,
+                        "choiceId": 1675521,
                         "choice": "Neither tautology nor contradiction",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     },
                     {
                         "label": "C",
-                        "choice_id": 1675522,
+                        "choiceId": 1675522,
                         "choice": "Conracdiction",
                         "image": "",
-                        "is_right": true,
+                        "isRight": true,
                         "isSelect1": false
                     },
                     {
                         "label": "D",
-                        "choice_id": 1675523,
+                        "choiceId": 1675523,
                         "choice": "Tautology",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     }
                 ],
@@ -471,6 +525,15 @@
                 "question_linked_to_id": null,
                 "isSelected": false,
                 "assertion": "",
+                "showSolution": false,
+                "solutionShown": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
                 "question_lo_ids": [
                     8662
                 ],
@@ -494,32 +557,32 @@
                 "solution": "<table class=\"table table-bordered\"><tbody><tr><td>&#160;$$p$$</td><td>$$q$$&#160;</td><td>$$\\sim p$$&#160;</td><td>$$p \\wedge q$$&#160;</td><td>$$\\sim p \\wedge q$$&#160;</td><td>&#160;$$(p \\wedge q) \\wedge (\\sim p \\wedge q)$$</td></tr><tr><td>T&#160;</td><td>T&#160;</td><td>F&#160;</td><td>T&#160;</td><td>F&#160;</td><td>F&#160;</td></tr><tr><td>&#160;T</td><td>F&#160;</td><td>F&#160;</td><td>F&#160;</td><td>F&#160;</td><td>F&#160;</td></tr><tr><td>&#160;F</td><td>T&#160;</td><td>T&#160;</td><td>F&#160;</td><td>T&#160;</td><td>F&#160;</td></tr><tr><td>&#160;F</td><td>F&#160;</td><td>T&#160;</td><td>F&#160;</td><td>F&#160;</td><td>F&#160;</td></tr></tbody></table>All the values in the last column are False, hence the given statement is a contradiction.",
                 "choices": [
                     {
-                        "is_right": false,
-                        "choice_id": 1701520,
+                        "isRight": false,
+                        "choiceId": 1701520,
                         "choice": "A tautology",
                         "image": "",
                         "label": "A",
                         "isSelect1": false
                     },
                     {
-                        "is_right": true,
-                        "choice_id": 1701521,
+                        "isRight": true,
+                        "choiceId": 1701521,
                         "choice": "A contradicition",
                         "image": "",
                         "label": "B",
                         "isSelect1": false
                     },
                     {
-                        "is_right": false,
-                        "choice_id": 1701522,
+                        "isRight": false,
+                        "choiceId": 1701522,
                         "choice": "Tautology and contradiction",
                         "image": "",
                         "label": "C",
                         "isSelect1": false
                     },
                     {
-                        "is_right": false,
-                        "choice_id": 1701523,
+                        "isRight": false,
+                        "choiceId": 1701523,
                         "choice": "Neither a tautology nor a contradiction",
                         "image": "",
                         "label": "D",
@@ -542,6 +605,15 @@
                 "passage_footer": "",
                 "question_linked_to_id": null,
                 "assertion": "",
+                "showSolution": false,
+                "solutionShown": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
                 "question_lo_ids": [
                     8663
                 ],
@@ -565,32 +637,32 @@
                 "solution": "Given statement is &#34;Suman is brilliant and dishonest if and only if Suman is rich&#34;<br/>$$\\Rightarrow (P\\wedge \\sim R) \\leftrightarrow Q$$<br/>We know that, $$\\sim (\\ a \\leftrightarrow \\ b)$$<br/>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; = $$ \\sim b \\leftrightarrow \\ a $$<div>Thus negation of given statement can be written as -<br/>$$\\sim \\left((P\\wedge \\sim R) \\leftrightarrow Q\\right)$$<div><div>$$\\sim Q \\leftrightarrow (P \\wedge \\sim R) $$<br/><div>Hence, option C is correct.<br/></div></div></div></div>",
                 "choices": [
                     {
-                        "is_right": false,
-                        "choice_id": 1050208,
+                        "isRight": false,
+                        "choiceId": 1050208,
                         "choice": "$$\\sim Q \\leftrightarrow \\sim P \\vee R$$",
                         "image": "",
                         "label": "A",
                         "isSelect1": false
                     },
                     {
-                        "is_right": false,
-                        "choice_id": 1050209,
+                        "isRight": false,
+                        "choiceId": 1050209,
                         "choice": "$$\\sim Q \\leftrightarrow P \\wedge R$$",
                         "image": "",
                         "label": "B",
                         "isSelect1": false
                     },
                     {
-                        "is_right": true,
-                        "choice_id": 1050210,
+                        "isRight": true,
+                        "choiceId": 1050210,
                         "choice": "$$\\sim Q \\leftrightarrow P \\wedge \\sim R$$",
                         "image": "",
                         "label": "C",
                         "isSelect1": false
                     },
                     {
-                        "is_right": false,
-                        "choice_id": 1050211,
+                        "isRight": false,
+                        "choiceId": 1050211,
                         "choice": "$$\\sim Q \\leftrightarrow \\sim P \\wedge R$$",
                         "image": "",
                         "isSelect1": false,
@@ -614,6 +686,15 @@
                 "passage_header": "",
                 "passage_footer": "",
                 "isSelected": false,
+                "showSolution": false,
+                "solutionShown": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
                 "assertion": "",
                 "reason": "",
                 "questionId": 468803,
@@ -629,34 +710,34 @@
                 "choices": [
                     {
                         "label": "A",
-                        "choice_id": 1670302,
+                        "choiceId": 1670302,
                         "choice": "Boys are not playing or they are happy",
                         "image": "",
-                        "is_right": true,
+                        "isRight": true,
                         "isSelect1": false
                     },
                     {
                         "label": "B",
-                        "choice_id": 1670303,
+                        "choiceId": 1670303,
                         "choice": "Boys are not happy or they are playing",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     },
                     {
                         "label": "C",
-                        "choice_id": 1670304,
+                        "choiceId": 1670304,
                         "choice": "Boys are playing or they are not happy",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     },
                     {
                         "label": "D",
-                        "choice_id": 1670305,
+                        "choiceId": 1670305,
                         "choice": "Boys are not playing or they are not happy",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     }
                 ],
@@ -688,8 +769,17 @@
                 "question_style": "single correct",
                 "passage": "",
                 "passage_image": "",
+                "showSolution": false,
+                "solutionShown": false,
                 "passage_header": "",
                 "passage_footer": "",
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
                 "isSelected": false,
                 "assertion": "",
                 "reason": "",
@@ -706,34 +796,34 @@
                 "choices": [
                     {
                         "label": "A",
-                        "choice_id": 1700832,
+                        "choiceId": 1700832,
                         "choice": "7",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     },
                     {
                         "label": "B",
-                        "choice_id": 1700833,
+                        "choiceId": 1700833,
                         "choice": "9",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     },
                     {
                         "label": "C",
-                        "choice_id": 1700834,
+                        "choiceId": 1700834,
                         "choice": "1",
                         "image": "",
-                        "is_right": true,
+                        "isRight": true,
                         "isSelect1": false
                     },
                     {
                         "label": "D",
-                        "choice_id": 1700835,
+                        "choiceId": 1700835,
                         "choice": "3",
                         "image": "",
-                        "is_right": false,
+                        "isRight": false,
                         "isSelect1": false
                     }
                 ],

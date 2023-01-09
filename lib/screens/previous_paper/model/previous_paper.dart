@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'previous_paper.g.dart';
 
-enum AnswerStatus { correct, wrong, answered, notanswered, selected }
+enum AnswerStatus { correct, wrong, answered, notanswered, selected, obs }
 
 @JsonSerializable(createToJson: true)
 class PreviousQuestionPapers {
@@ -108,7 +108,11 @@ class Questions {
   int? solutionRating;
   bool? disableBookmark;
   String? lastAttemptedOn;
+  bool? showSolution;
+  bool? solutionShown;
   AnswerStatus? status;
+  Set<int>? selectedAns;
+  List<bool>? attemptedAnswer;
 
   Questions(
       {this.isBookmarked,
@@ -130,6 +134,10 @@ class Questions {
       this.solution,
       this.solutionImage,
       this.status,
+      this.selectedAns,
+      this.attemptedAnswer,
+      this.showSolution,
+      this.solutionShown,
       // this.solutionLinks,
       this.choices,
       this.multipleCorrect,

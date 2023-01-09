@@ -38,7 +38,7 @@ class MyVideo extends StatelessWidget {
                       const Icon(
                         Icons.download,
                         color: Colors.white,
-                      )
+                      ),
                     ],
                   ),
                 ),
