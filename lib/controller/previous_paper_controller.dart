@@ -127,10 +127,10 @@ class PreviousQuestionPaperController extends GetxController {
 
   Future<void> fetchPreviousQuestionPaperlist() async {
     final response =
-        await rootBundle.loadString('json/maths/`previous_paper.json');
+        await rootBundle.loadString('json/maths/previous_paper.json');
     previousQuestionPapers =
         PreviousQuestionPapers.fromJson(jsonDecode(response));
-    print(response);
+
     update();
   }
 }

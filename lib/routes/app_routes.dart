@@ -9,7 +9,7 @@ abstract class Routes {
   static const polyconcepts = '/poly_concepts';
   static const video = '/video';
   static const mathschaptpage = '/maths_chapt_page';
-  static const ncertsoln = '/ncert_soln';
+  static const ncert = '/ncert_soln';
   static const crashcourse = '/crash_course';
   static const previousquestionpaper = '/previous-question-paper';
 }

@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:toppr1/screens/chapters/widgets/video.dart';
 import 'package:toppr1/screens/previous_paper/view/previous_paper.dart';
+import 'package:toppr1/screens/quick_practice/ncert_solution/view/ncert_solution.dart';
 
 import '../screens/chapt_list/view/chapt_list.view.dart';
 import '../screens/chapters/view/chapt_detail_page.view.dart';
@@ -11,7 +12,6 @@ import '../screens/home/view/home_view.dart';
 import '../screens/home/widgets/history_page.dart';
 import '../screens/login/view/login_view.dart';
 import '../screens/quick_practice/crash_course/view/crash_course.dart';
-import '../screens/quick_practice/ncert_solution/view/ncert_solution.dart';
 import '../screens/splash/view/splash_view.dart';
 import 'app_routes.dart';
 

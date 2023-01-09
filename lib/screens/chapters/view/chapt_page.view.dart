@@ -16,7 +16,7 @@ class PolynomialPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    dynamic title = Get.parameters['chapTitle'];
+    dynamic title1 = Get.parameters['chapTitle'];
 
     return SafeArea(
         child: Scaffold(
@@ -59,7 +59,7 @@ class PolynomialPage extends StatelessWidget {
                     horizontal: 15,
                   ),
                   child: Text(
-                    title,
+                    title1 ?? '',
                     style: const TextStyle(
                         color: Colors.black,
                         fontSize: 17,
@@ -198,20 +198,31 @@ class PolynomialPage extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              Get.toNamed(Routes.ncertsoln);
+                              Get.toNamed(Routes.ncert, parameters: {
+                                "CardTitle": controller
+                                        .ncertSolutions?.data?.pageTitle ??
+                                    '',
+                              });
                             },
                             child: _buildQuickPractice(
-                                Icons.assignment, 'NCERT Solutions'),
+                                Icons.assignment,
+                                controller.ncertSolutions?.data?.pageTitle ??
+                                    ''),
                           ),
                           const SizedBox(
                             width: 35,
                           ),
                           GestureDetector(
                             onTap: () {
-                              Get.toNamed(Routes.crashcourse);
+                              Get.toNamed(Routes.crashcourse, parameters: {
+                                "CardTitle":
+                                    controller.crashCourse?.data?.pageTitle ??
+                                        ''
+                              });
                             },
                             child: _buildQuickPractice(
-                                Icons.electric_bolt_rounded, 'Crash Course'),
+                                Icons.electric_bolt_rounded,
+                                controller.crashCourse?.data?.pageTitle ?? ''),
                           ),
                           const SizedBox(
                             width: 35,
@@ -224,7 +235,7 @@ class PolynomialPage extends StatelessWidget {
                                   Icons.star,
                                   myController.previousQuestionPapers?.data
                                           ?.pageTitle ??
-                                      'Easy')),
+                                      '')),
                           const SizedBox(
                             width: 35,
                           ),

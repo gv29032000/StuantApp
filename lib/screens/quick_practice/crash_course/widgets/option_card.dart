@@ -3,10 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tex/flutter_tex.dart';
 import 'package:get/get.dart';
+import 'package:toppr1/screens/quick_practice/crash_course/view/crash_course.dart';
 
-import '../../../../controller/chapt.controller.dart';
-
-class OptionCard extends StatelessWidget {
+class OptionCard extends PolyCrashCoursePage {
   OptionCard({
     super.key,
     this.press,
@@ -19,10 +18,7 @@ class OptionCard extends StatelessWidget {
   final String text;
   final int index;
   final int index1;
-  VoidCallback? press;
-
-  final PolynomialVideoController controller =
-      Get.find<PolynomialVideoController>();
+  final VoidCallback? press;
 
   @override
   Widget build(BuildContext context) {
