@@ -17,6 +17,7 @@ dependencies:
   flutter_tex: ^4.0.3+4
   cached_network_image: 
   sliver_header_delegate:
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -27,7 +28,8 @@ flutter:
   assets:
     - assets/images/
     - json/maths/
-  #   - images/a_dot_ham.jpeg
+    - json/login/
+    
   fonts:
     - family: Karla
       fonts:

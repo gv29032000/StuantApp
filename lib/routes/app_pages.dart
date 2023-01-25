@@ -1,8 +1,11 @@
 import 'package:get/get.dart';
 import 'package:toppr1/screens/chapters/widgets/video.dart';
+import 'package:toppr1/screens/home/view/select_class_view.dart';
+import 'package:toppr1/screens/login/view/otp_page.dart';
 import 'package:toppr1/screens/previous_paper/view/previous_paper.dart';
 import 'package:toppr1/screens/quick_practice/ncert_solution/view/ncert_solution.dart';
 
+import '../screens/bookmarks/view/my_bookmark.dart';
 import '../screens/chapt_list/view/chapt_list.view.dart';
 import '../screens/chapters/view/chapt_detail_page.view.dart';
 import '../screens/chapters/view/chapt_page.view.dart';
@@ -31,5 +34,8 @@ class AppPages {
     GetPage(name: '/ncert_soln', page: () => NCERTSolutionPage()),
     GetPage(name: '/crash_course', page: () => PolyCrashCoursePage()),
     GetPage(name: '/previous-question-paper', page: () => PreviousPapperView()),
+    GetPage(name: '/select-clsss-section', page: () => SelectClassView()),
+    GetPage(name: '/otp-page', page: () => OTPPage()),
+    GetPage(name: '/my-bookmark-page', page: () => const MyBookMarkView()),
   ];
 }

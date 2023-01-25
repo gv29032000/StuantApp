@@ -10,6 +10,7 @@ import 'package:toppr1/screens/previous_paper/widgets/build_text.dart';
 class PreviousPapperView extends StatelessWidget {
   PreviousPapperView({super.key});
   PreviousQuestionPaperController myController = Get.find();
+
   final PolynomialVideoController controller =
       Get.find<PolynomialVideoController>();
 
@@ -254,8 +255,6 @@ class PreviousPapperView extends StatelessWidget {
                                                   ?.elementAt(index1) ==
                                               true) {
                                         status = AnswerStatus.selected;
-                                        myController.status.value =
-                                            AnswerStatus.answered;
                                       }
                                       return AnswerOption(
                                           status: status,
@@ -290,9 +289,9 @@ class PreviousPapperView extends StatelessWidget {
                                   builder: (_) {
                                   return Container(
                                     decoration: BoxDecoration(
-                                        color: Colors.lightGreen.shade50,
-                                        borderRadius:
-                                            BorderRadius.circular(10)),
+                                      color: Colors.lightGreen.shade50,
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
                                     child: Padding(
                                       padding: const EdgeInsets.all(15.0),
                                       child: Column(

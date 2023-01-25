@@ -2,22 +2,26 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:toppr1/screens/quick_practice/bottom_button_card.dart';
-import 'package:toppr1/screens/quick_practice/widgets/close_card.dart';
+import 'package:toppr1/controller/ncert_solution_controller.dart';
+import 'package:toppr1/screens/quick_practice/close_card.dart';
 
 import '../../controller/chapt.controller.dart';
 
 class QuickPracticeCard extends StatelessWidget {
   QuickPracticeCard({
     this.child,
+    required this.child1,
     super.key,
   });
   final Widget? child;
+  final Widget? child1;
 
   dynamic title = Get.parameters['CardTitle'];
 
   final PolynomialVideoController controller =
       Get.find<PolynomialVideoController>();
+  final NCERTSolutionController myController =
+      Get.find<NCERTSolutionController>();
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +32,9 @@ class QuickPracticeCard extends StatelessWidget {
         automaticallyImplyLeading: false,
         backgroundColor: Colors.black,
         actions: [
-          buildActions(
+          buildActions1(
             Icons.apps_rounded,
+            myController,
           ),
           const SizedBox(
             width: 10,
@@ -53,7 +58,8 @@ class QuickPracticeCard extends StatelessWidget {
       body: Stack(
         children: [
           child ?? const SizedBox(),
-          BottomButtonCard(),
+          child1 ?? const SizedBox(),
+          // BottomButtonCard(),
         ],
       ),
     );
@@ -61,16 +67,42 @@ class QuickPracticeCard extends StatelessWidget {
 }
 
 buildActions(IconData icon) {
-  return Container(
-    decoration: BoxDecoration(
-      shape: BoxShape.circle,
-      border: Border.all(color: Colors.white),
+  return GestureDetector(
+    onTap: () {
+      // controller!.isList.value = !controller.isList.value;
+    },
+    child: Container(
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        border: Border.all(color: Colors.white),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Icon(
+          icon,
+          size: 13,
+        ),
+      ),
     ),
-    child: Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: Icon(
-        icon,
-        size: 13,
+  );
+}
+
+buildActions1(IconData icon, NCERTSolutionController controller) {
+  return GestureDetector(
+    onTap: () {
+      controller.isList.value = !controller.isList.value;
+    },
+    child: Container(
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        border: Border.all(color: Colors.white),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Icon(
+          icon,
+          size: 13,
+        ),
       ),
     ),
   );

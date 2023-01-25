@@ -146,7 +146,6 @@ Map<String, dynamic> _$QuestionsToJson(Questions instance) => <String, dynamic>{
       'assertion': instance.assertion,
       'reason': instance.reason,
       'questionId': instance.questionId,
-      'isSelected': instance.isSelected,
       'alreadyAttempted': instance.alreadyAttempted,
       'correctlyAnswered': instance.correctlyAnswered,
       'questionImage': instance.questionImage,
@@ -173,6 +172,7 @@ Map<String, dynamic> _$QuestionsToJson(Questions instance) => <String, dynamic>{
       'lastAttemptedOn': instance.lastAttemptedOn,
       'showSolution': instance.showSolution,
       'solutionShown': instance.solutionShown,
+      'isSelected': instance.isSelected,
       'status': _$AnswerStatusEnumMap[instance.status],
       'selectedAns': instance.selectedAns?.toList(),
       'attemptedAnswer': instance.attemptedAnswer,
@@ -184,6 +184,7 @@ const _$AnswerStatusEnumMap = {
   AnswerStatus.answered: 'answered',
   AnswerStatus.notanswered: 'notanswered',
   AnswerStatus.selected: 'selected',
+  AnswerStatus.obs: 'obs',
 };
 
 Choices _$ChoicesFromJson(Map<String, dynamic> json) => Choices(

@@ -2,6 +2,14 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'crash_course.g.dart';
 
+enum AnswerStatus {
+  correct,
+  wrong,
+  answered,
+  notanswered,
+  selected,
+}
+
 @JsonSerializable(createToJson: true)
 class PolyCrashCourse {
   Data? data;
@@ -104,6 +112,12 @@ class Questions1 {
   bool? disableBookmark;
   String? lastAttemptedOn;
   String? bloom;
+  bool? showSolution;
+  bool? solutionShown;
+  bool? isSelected;
+  AnswerStatus? status;
+  Set<int>? selectedAns;
+  List<bool>? attemptedAnswer;
 
   Questions1(
       {this.isBookmarked,
@@ -111,6 +125,11 @@ class Questions1 {
       this.questionStyle,
       this.passage,
       this.passageImage,
+      this.solutionShown,
+      this.showSolution,
+      this.isSelected,
+      this.status,
+      this.attemptedAnswer,
       this.passageHeader,
       this.passageFooter,
       this.assertion,
@@ -155,8 +174,15 @@ class Choices {
   String? choice;
   String? image;
   bool? isRight;
+  bool? isSelect1;
 
-  Choices({this.label, this.choiceId, this.choice, this.image, this.isRight});
+  Choices(
+      {this.label,
+      this.choiceId,
+      this.choice,
+      this.image,
+      this.isRight,
+      this.isSelect1});
   factory Choices.fromJson(Map<String, dynamic> Json) =>
       _$ChoicesFromJson(Json);
   Map<String, dynamic> toJson() => _$ChoicesToJson(this);

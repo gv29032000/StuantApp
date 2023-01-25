@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:toppr1/screens/quick_practice/widgets/close_card.dart';
-
-import '../../controller/chapt.controller.dart';
+import 'package:toppr1/controller/crash_course_controller.dart';
 
 class BottomButtonCard extends StatelessWidget {
   BottomButtonCard({super.key});
 
-  final PolynomialVideoController controller =
-      Get.find<PolynomialVideoController>();
+  final CrashCourseController controller = Get.find<CrashCourseController>();
 
   @override
   Widget build(BuildContext context) {
@@ -49,55 +46,135 @@ class BottomButtonCard extends StatelessWidget {
               ),
               Obx(() {
                 return ElevatedButton(
-                    onPressed: () {
-                      controller.solutionCall(controller.currIndex.value);
-                      controller.currIndex.value == 9
-                          ? Get.dialog(const CloseCard())
-                          : controller.ncertSolutions?.data?.questions
+                  onPressed: () {
+                    if (controller.crashCourse?.data?.questions
+                            ?.elementAt(controller.currIndex.value)
+                            .choices
+                            ?.elementAt(controller.selectedAnswerIndex.value)
+                            .isSelect1 ==
+                        false) {
+                      controller.nextPage();
+                    }
+                    if (controller.crashCourse?.data?.questions
+                            ?.elementAt(controller.currIndex.value)
+                            .choices
+                            ?.elementAt(controller.selectedAnswerIndex.value)
+                            .isSelect1 ==
+                        true) {
+                      controller.viewSolution(controller.currIndex.value);
+                      controller.checkAnswer(
+                          controller.currIndex.value,
+                          controller.crashCourse?.data?.questions
+                                  ?.elementAt(controller.currIndex.value)
+                                  .choices
+                                  ?.elementAt(controller.currIndex.value)
+                                  .choiceId ??
+                              0);
+                      controller.crashCourse?.data?.questions
+                                  ?.elementAt(controller.currIndex.value)
+                                  .solutionShown ==
+                              true
+                          ? controller.nextPage()
+                          : controller.solutionCall(controller.currIndex.value);
+                    }
+                    // controller.solutionCall(controller.currIndex.value);
+                    // controller.currIndex.value == 9
+                    //     ? Get.dialog(const CloseCard())
+                    //     : controller.ncertSolutions?.data?.questions
+                    //                 ?.elementAt(controller.currIndex.value)
+                    //                 .solutionShown ==
+                    //             true
+                    //         ? controller.nextPage()
+                    //         : controller
+                    //             .showSolution1(controller.currIndex.value);
+                  },
+                  style: ElevatedButton.styleFrom(
+                      side: BorderSide(
+                          color: controller.crashCourse?.data?.questions
                                       ?.elementAt(controller.currIndex.value)
-                                      .solutionShown ==
+                                      .choices
+                                      ?.elementAt(
+                                          controller.selectedAnswerIndex.value)
+                                      .isSelect1 ==
                                   true
-                              ? controller.nextPage()
-                              : controller
-                                  .showSolution1(controller.currIndex.value);
-                    },
-                    style: ElevatedButton.styleFrom(
-                        elevation: 0,
-                        minimumSize: const Size(270, 50),
-                        shape: const StadiumBorder(),
-                        backgroundColor: controller
-                                    .ncertSolutions?.data?.questions
-                                    ?.elementAt(controller.currIndex.value)
-                                    .showSolution ==
-                                false
-                            ? Colors.lightBlue.shade300
-                            : const Color(0xff7ed321)),
-                    child: controller.ncertSolutions?.data?.questions
-                                ?.elementAt(controller.currIndex.value)
-                                .showSolution ==
-                            true
-                        ? const Text(
-                            'NEXT',
-                            style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w800),
-                          )
-                        : controller.currIndex.value == 9
-                            ? const Text(
-                                'FINISH',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w800),
-                              )
-                            : const Text(
-                                'VIEW SOLUTION',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w800),
-                              ));
+                              ? Colors.lightBlue.shade300
+                              : Colors.grey),
+                      elevation: 0,
+                      minimumSize: const Size(270, 50),
+                      shape: const StadiumBorder(),
+                      backgroundColor: controller.crashCourse?.data?.questions
+                                  ?.elementAt(controller.currIndex.value)
+                                  .solutionShown ==
+                              true
+                          ? const Color(0xff7ED321)
+                          : controller.crashCourse?.data?.questions
+                                      ?.elementAt(controller.currIndex.value)
+                                      .choices
+                                      ?.elementAt(
+                                          controller.selectedAnswerIndex.value)
+                                      .isSelect1 ==
+                                  true
+                              ? Colors.lightBlue.shade300
+                              : Colors.white),
+                  child: controller.crashCourse?.data?.questions
+                              ?.elementAt(controller.currIndex.value)
+                              .solutionShown ==
+                          true
+                      ? const Text(
+                          'NEXT',
+                          style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w800),
+                        )
+                      : controller.crashCourse?.data?.questions
+                                  ?.elementAt(controller.currIndex.value)
+                                  .choices
+                                  ?.elementAt(
+                                      controller.selectedAnswerIndex.value)
+                                  .isSelect1 ==
+                              true
+                          ? const Text(
+                              'SUBMIT',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w800),
+                            )
+                          : const Text(
+                              'SKIP',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.w800),
+                            ),
+                  //  controller.ncertSolutions?.data?.questions
+                  //             ?.elementAt(controller.currIndex.value)
+                  //             .showSolution ==
+                  //         true
+                  //     ? const Text(
+                  //         'NEXT',
+                  //         style: TextStyle(
+                  //             fontSize: 16,
+                  //             color: Colors.white,
+                  //             fontWeight: FontWeight.w800),
+                  //       )
+                  //     : controller.currIndex.value == 9
+                  //         ? const Text(
+                  //             'FINISH',
+                  //             style: TextStyle(
+                  //                 fontSize: 16,
+                  //                 color: Colors.white,
+                  //                 fontWeight: FontWeight.w800),
+                  //           )
+                  //         : const Text(
+                  //             'VIEW SOLUTION',
+                  //             style: TextStyle(
+                  //                 fontSize: 16,
+                  //                 color: Colors.white,
+                  //                 fontWeight: FontWeight.w800),
+                  //           ),
+                );
               })
             ],
           ),

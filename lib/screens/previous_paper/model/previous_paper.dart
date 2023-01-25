@@ -81,7 +81,7 @@ class Questions {
   String? assertion;
   String? reason;
   int? questionId;
-  bool? isSelected;
+
   bool? alreadyAttempted;
   bool? correctlyAnswered;
   String? questionImage;
@@ -110,6 +110,7 @@ class Questions {
   String? lastAttemptedOn;
   bool? showSolution;
   bool? solutionShown;
+  bool? isSelected;
   AnswerStatus? status;
   Set<int>? selectedAns;
   List<bool>? attemptedAnswer;

@@ -86,6 +86,13 @@ Questions1 _$Questions1FromJson(Map<String, dynamic> json) => Questions1(
       questionStyle: json['questionStyle'] as String?,
       passage: json['passage'] as String?,
       passageImage: json['passageImage'] as String?,
+      solutionShown: json['solutionShown'] as bool?,
+      showSolution: json['showSolution'] as bool?,
+      isSelected: json['isSelected'] as bool?,
+      status: $enumDecodeNullable(_$AnswerStatusEnumMap, json['status']),
+      attemptedAnswer: (json['attemptedAnswer'] as List<dynamic>?)
+          ?.map((e) => e as bool)
+          .toList(),
       passageHeader: json['passageHeader'] as String?,
       passageFooter: json['passageFooter'] as String?,
       assertion: json['assertion'] as String?,
@@ -125,7 +132,8 @@ Questions1 _$Questions1FromJson(Map<String, dynamic> json) => Questions1(
       disableBookmark: json['disableBookmark'] as bool?,
       lastAttemptedOn: json['lastAttemptedOn'] as String?,
       bloom: json['bloom'] as String?,
-    );
+    )..selectedAns =
+        (json['selectedAns'] as List<dynamic>?)?.map((e) => e as int).toSet();
 
 Map<String, dynamic> _$Questions1ToJson(Questions1 instance) =>
     <String, dynamic>{
@@ -166,7 +174,21 @@ Map<String, dynamic> _$Questions1ToJson(Questions1 instance) =>
       'disableBookmark': instance.disableBookmark,
       'lastAttemptedOn': instance.lastAttemptedOn,
       'bloom': instance.bloom,
+      'showSolution': instance.showSolution,
+      'solutionShown': instance.solutionShown,
+      'isSelected': instance.isSelected,
+      'status': _$AnswerStatusEnumMap[instance.status],
+      'selectedAns': instance.selectedAns?.toList(),
+      'attemptedAnswer': instance.attemptedAnswer,
     };
+
+const _$AnswerStatusEnumMap = {
+  AnswerStatus.correct: 'correct',
+  AnswerStatus.wrong: 'wrong',
+  AnswerStatus.answered: 'answered',
+  AnswerStatus.notanswered: 'notanswered',
+  AnswerStatus.selected: 'selected',
+};
 
 Choices _$ChoicesFromJson(Map<String, dynamic> json) => Choices(
       label: json['label'] as String?,
@@ -174,6 +196,7 @@ Choices _$ChoicesFromJson(Map<String, dynamic> json) => Choices(
       choice: json['choice'] as String?,
       image: json['image'] as String?,
       isRight: json['isRight'] as bool?,
+      isSelect1: json['isSelect1'] as bool?,
     );
 
 Map<String, dynamic> _$ChoicesToJson(Choices instance) => <String, dynamic>{
@@ -182,6 +205,7 @@ Map<String, dynamic> _$ChoicesToJson(Choices instance) => <String, dynamic>{
       'choice': instance.choice,
       'image': instance.image,
       'isRight': instance.isRight,
+      'isSelect1': instance.isSelect1,
     };
 
 QuestionSet _$QuestionSetFromJson(Map<String, dynamic> json) => QuestionSet(

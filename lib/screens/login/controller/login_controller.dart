@@ -6,6 +6,8 @@ import 'package:toppr1/routes/app_routes.dart';
 
 class LoginController extends GetxController {
   final getStorage = GetStorage();
+  var pageIndex = 0.obs;
+  var valueFirst = false.obs;
   @override
   void onInit() {
     super.onInit();

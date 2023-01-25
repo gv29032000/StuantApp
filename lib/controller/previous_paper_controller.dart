@@ -116,6 +116,7 @@ class PreviousQuestionPaperController extends GetxController {
         ?.elementAt(ansindex)
         .isSelect1);
     print('hiiii $selecteOptionList');
+
     previousQuestionPapers?.data?.questions
         ?.elementAt(quesindex)
         .choices
@@ -211,7 +212,6 @@ class PreviousQuestionPaperController extends GetxController {
 
   Future<bool?> solutionCall(int index) async {
     var submitted = await viewSolution(index);
-    // isSelect.value = false;
     update();
     return previousQuestionPapers?.data?.questions
         ?.elementAt(index)
@@ -222,21 +222,14 @@ class PreviousQuestionPaperController extends GetxController {
     //isAnswered = false;
     pageController.nextPage(
         duration: const Duration(milliseconds: 100), curve: Curves.linear);
-    //print('currIndexSubi = $currIndex');
+    update();
   }
 
   prevPage() {
-    //isAnswered = true;
     pageController.previousPage(
         duration: const Duration(milliseconds: 100), curve: Curves.linear);
+    update();
   }
-
-  // void checkAnswer(int index, Questions? questions) {
-  //   isPressed.value = true;
-  //   questionIsAnswerd.update(questions?.questionId ?? 0, (value) => true);
-
-  //   print('hii ${isPressed.value}');
-  // }
 
   @override
   void onInit() {
@@ -249,7 +242,6 @@ class PreviousQuestionPaperController extends GetxController {
         await rootBundle.loadString('json/maths/previous_paper.json');
     previousQuestionPapers =
         PreviousQuestionPapers.fromJson(jsonDecode(response));
-
     update();
   }
 }

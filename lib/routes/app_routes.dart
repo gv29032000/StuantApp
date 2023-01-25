@@ -12,4 +12,7 @@ abstract class Routes {
   static const ncert = '/ncert_soln';
   static const crashcourse = '/crash_course';
   static const previousquestionpaper = '/previous-question-paper';
+  static const selectclasssection = '/select-clsss-section';
+  static const otppage = '/otp-page';
+  static const bookmarkpage = '/my-bookmark-page';
 }

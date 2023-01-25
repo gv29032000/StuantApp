@@ -2,6 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:toppr1/controller/chapt.controller.dart';
+import 'package:toppr1/controller/crash_course_controller.dart';
+import 'package:toppr1/controller/ncert_solution_controller.dart';
 
 import '../../../controller/previous_paper_controller.dart';
 import '../../../routes/app_routes.dart';
@@ -13,6 +15,10 @@ class PolynomialPage extends StatelessWidget {
 
   PreviousQuestionPaperController myController =
       Get.put(PreviousQuestionPaperController());
+
+  CrashCourseController crashController = Get.put(CrashCourseController());
+  NCERTSolutionController ncertSolutionController =
+      Get.put(NCERTSolutionController());
 
   @override
   Widget build(BuildContext context) {
@@ -199,9 +205,12 @@ class PolynomialPage extends StatelessWidget {
                           GestureDetector(
                             onTap: () {
                               Get.toNamed(Routes.ncert, parameters: {
-                                "CardTitle": controller
-                                        .ncertSolutions?.data?.pageTitle ??
-                                    '',
+                                "CardTitle": ncertSolutionController
+                                        .polyNCERTSolutions
+                                        .value
+                                        .data
+                                        ?.pageTitle ??
+                                    'NCERT Solutions',
                               });
                             },
                             child: _buildQuickPractice(
@@ -215,9 +224,9 @@ class PolynomialPage extends StatelessWidget {
                           GestureDetector(
                             onTap: () {
                               Get.toNamed(Routes.crashcourse, parameters: {
-                                "CardTitle":
-                                    controller.crashCourse?.data?.pageTitle ??
-                                        ''
+                                "CardTitle": crashController
+                                        .crashCourse?.data?.pageTitle ??
+                                    'Crash Course'
                               });
                             },
                             child: _buildQuickPractice(

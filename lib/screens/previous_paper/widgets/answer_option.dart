@@ -53,262 +53,72 @@ class AnswerOption extends StatelessWidget {
       default:
         backgroundColor = Colors.white;
     }
-    return Column(
-      children: [
-        GestureDetector(
-          onTap:
-              // myController.checkIsQuestionAnswered(questionId)
-              // ? null
-              // :
-              onPressed,
-          child: Container(
-            height: 70,
-            width: 300,
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(offset: const Offset(0, 2), color: backgroundColor)
-              ],
-              color: backgroundColor,
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(
-                color: borderColor,
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        // padding: const EdgeInsets.all(18),
+        margin: const EdgeInsets.only(top: 12),
+        decoration: BoxDecoration(
+            color: backgroundColor,
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(
+              color: borderColor,
+            ),
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.grey.shade200,
+                  blurRadius: 2,
+                  spreadRadius: 0.5,
+                  offset: const Offset(0, 2)),
+            ]),
+        child: Row(
+          children: [
+            const SizedBox(
+              width: 15,
+            ),
+            Container(
+              width: 25,
+              height: 25,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: labelColor,
+                //borderRadius: BorderRadius.circular(10)
+              ),
+              child: Center(
+                child: Text(
+                  questions
+                          ?.elementAt(questionIndex)
+                          .choices
+                          ?.elementAt(ansIndex)
+                          .label ??
+                      '',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: labelTextColor,
+                  ),
+                ),
               ),
             ),
-            child: Row(
-              children: [
-                const SizedBox(
-                  width: 20,
-                ),
-                Container(
-                  height: 20,
-                  width: 20,
-                  decoration: BoxDecoration(
-                      // color: const Color(0xffE0E0E0),
-                      color: labelColor,
-                      borderRadius: BorderRadius.circular(50)),
-                  child: Center(
-                    child: Text(
-                      questions
-                              ?.elementAt(questionIndex)
-                              .choices
-                              ?.elementAt(ansIndex)
-                              .label ??
-                          '',
-                      style: TextStyle(color: labelTextColor),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                GestureDetector(
-                  onTap: onPressed,
-                  child: Center(
-                    child: SizedBox(
-                      // height: 55,
-                      width: 200,
-                      child: TeXView(
-                        child: TeXViewDocument(questions
-                                ?.elementAt(questionIndex)
-                                .choices
-                                ?.elementAt(ansIndex)
-                                .choice ??
-                            'No Data'),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+            const SizedBox(
+              width: 12,
             ),
-          ),
-        ),
-        const SizedBox(
-          height: 16,
-        )
-      ],
-    );
-  }
-}
-
-class CorrectAnsCard extends StatelessWidget {
-  CorrectAnsCard({
-    super.key,
-    required this.questionIndex,
-    required this.ansIndex,
-    required this.onPressed,
-  });
-  final int questionIndex;
-  final int ansIndex;
-  final Function() onPressed;
-
-  PreviousQuestionPaperController myController = Get.find();
-  @override
-  Widget build(BuildContext context) {
-    var questions = myController.previousQuestionPapers?.data?.questions;
-
-    return Column(
-      children: [
-        GestureDetector(
-          onTap:
-              // myController.checkIsQuestionAnswered(questionId)
-              // ? null
-              // :
-              onPressed,
-          child: Container(
-            height: 70,
-            width: 300,
-            decoration: BoxDecoration(
-              boxShadow: const [
-                BoxShadow(
-                  offset: Offset(0, 2),
-                )
-              ],
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(
-                color: Colors.green.shade300,
+            SizedBox(
+              width: 265,
+              child: TeXView(
+                child: TeXViewDocument(
+                    questions
+                            ?.elementAt(questionIndex)
+                            .choices
+                            ?.elementAt(ansIndex)
+                            .choice ??
+                        'NO DATA',
+                    style:
+                        const TeXViewStyle(textAlign: TeXViewTextAlign.left)),
               ),
             ),
-            child: Row(
-              children: [
-                const SizedBox(
-                  width: 20,
-                ),
-                Container(
-                  height: 20,
-                  width: 20,
-                  decoration: BoxDecoration(
-                      color: const Color(0xffE0E0E0),
-                      borderRadius: BorderRadius.circular(50)),
-                  child: Center(
-                    child: Text(
-                      questions
-                              ?.elementAt(questionIndex)
-                              .choices
-                              ?.elementAt(ansIndex)
-                              .label ??
-                          '',
-                      style: const TextStyle(color: Colors.black),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                GestureDetector(
-                  onTap: onPressed,
-                  child: Center(
-                    child: SizedBox(
-                      // height: 55,
-                      width: 200,
-                      child: TeXView(
-                        child: TeXViewDocument(questions
-                                ?.elementAt(questionIndex)
-                                .choices
-                                ?.elementAt(ansIndex)
-                                .choice ??
-                            'No Data'),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          ],
         ),
-        const SizedBox(
-          height: 16,
-        )
-      ],
-    );
-  }
-}
-
-class WrongAnsCard extends StatelessWidget {
-  WrongAnsCard({
-    super.key,
-    required this.questionIndex,
-    required this.ansIndex,
-    required this.onPressed,
-  });
-  final int questionIndex;
-  final int ansIndex;
-  final Function() onPressed;
-
-  PreviousQuestionPaperController myController = Get.find();
-  @override
-  Widget build(BuildContext context) {
-    var questions = myController.previousQuestionPapers?.data?.questions;
-    return Column(
-      children: [
-        GestureDetector(
-          onTap: onPressed,
-          child: Container(
-            height: 70,
-            width: 300,
-            decoration: BoxDecoration(
-              boxShadow: const [
-                BoxShadow(
-                  offset: Offset(0, 2),
-                )
-              ],
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(
-                color: Colors.red.shade200,
-              ),
-            ),
-            child: Row(
-              children: [
-                const SizedBox(
-                  width: 20,
-                ),
-                Container(
-                  height: 20,
-                  width: 20,
-                  decoration: BoxDecoration(
-                      color: const Color(0xffE0E0E0),
-                      borderRadius: BorderRadius.circular(50)),
-                  child: Center(
-                    child: Text(
-                      questions
-                              ?.elementAt(questionIndex)
-                              .choices
-                              ?.elementAt(ansIndex)
-                              .label ??
-                          '',
-                      style: const TextStyle(color: Colors.black),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                GestureDetector(
-                  onTap: onPressed,
-                  child: Center(
-                    child: SizedBox(
-                      // height: 55,
-                      width: 200,
-                      child: TeXView(
-                        child: TeXViewDocument(questions
-                                ?.elementAt(questionIndex)
-                                .choices
-                                ?.elementAt(ansIndex)
-                                .choice ??
-                            'No Data'),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-        const SizedBox(
-          height: 16,
-        )
-      ],
+      ),
     );
   }
 }
@@ -371,7 +181,7 @@ class NotAnswerCard extends StatelessWidget {
               boxShadow: const [
                 BoxShadow(offset: Offset(0, 2), color: Colors.white),
               ],
-              // color: backgroundColor,
+              color: Colors.white,
               borderRadius: BorderRadius.circular(8),
               border: Border.all(
                 color: backgroundColor,

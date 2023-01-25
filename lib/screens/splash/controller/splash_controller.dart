@@ -16,7 +16,7 @@ class SplashController extends GetxController {
   void onReady() {
     if (getStorage.read('id') != null) {
       Future.delayed(const Duration(milliseconds: 0), () {
-        Get.offAllNamed(Routes.home);
+        Get.offAllNamed(Routes.login);
       });
     } else {
       Get.offAllNamed(Routes.login);

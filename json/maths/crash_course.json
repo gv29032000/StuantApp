@@ -35,28 +35,32 @@
                         "choiceId": 1564846,
                         "choice": "$$\\displaystyle 27{ x }^{ 4 }$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "B",
                         "choiceId": 1564847,
                         "choice": "$$\\displaystyle 27{ x }^{ 2 }$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "C",
                         "choiceId": 1564848,
                         "choice": "$$\\displaystyle 27x$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "D",
                         "choiceId": 1564849,
                         "choice": "$$\\displaystyle -27x$$",
                         "image": "",
-                        "isRight": true
+                        "isRight": true,
+                        "isSelect1": false
                     }
                 ],
                 "multiple_correct": false,
@@ -80,7 +84,17 @@
                 "level": 3,
                 "solution_rating": 0,
                 "disable_bookmark": false,
-                "last_attempted_on": "2022-12-13T13:21:16+05:30"
+                "last_attempted_on": "2022-12-13T13:21:16+05:30",
+                "showSolution": false,
+                "solutionShown": false,
+                "isSelected": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ]
             },
             {
                 "is_bookmarked": false,
@@ -109,28 +123,32 @@
                         "choiceId": 1023205,
                         "choice": "$$(x-2)(x+3)$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "B",
                         "choiceId": 1304294,
                         "choice": "$$(x+2)(x+3)$$",
                         "image": "",
-                        "isRight": true
+                        "isRight": true,
+                        "isSelect1": false
                     },
                     {
                         "label": "C",
                         "choiceId": 1304295,
                         "choice": "$$(x+4)(x+3)$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "D",
                         "choiceId": 1304296,
                         "choice": "$$(x+2)(x+9)$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     }
                 ],
                 "multiple_correct": false,
@@ -154,7 +172,17 @@
                 "level": 3,
                 "solution_rating": 0,
                 "disable_bookmark": false,
-                "last_attempted_on": "2022-12-21T17:21:13+05:30"
+                "last_attempted_on": "2022-12-21T17:21:13+05:30",
+                "showSolution": false,
+                "solutionShown": false,
+                "isSelected": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ]
             },
             {
                 "is_bookmarked": false,
@@ -183,28 +211,32 @@
                         "choiceId": 1023186,
                         "choice": "$$3.5r(p+q)$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "B",
                         "choiceId": 1304266,
                         "choice": "$$0.75r(p+q)$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "C",
                         "choiceId": 1304267,
                         "choice": "$$0.5r(p+q)$$",
                         "image": "",
-                        "isRight": true
+                        "isRight": true,
+                        "isSelect1": false
                     },
                     {
                         "label": "D",
                         "choiceId": 1304268,
                         "choice": "$$2r(p+q)$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     }
                 ],
                 "multiple_correct": false,
@@ -228,7 +260,17 @@
                 "level": 3,
                 "solution_rating": 0,
                 "disable_bookmark": false,
-                "last_attempted_on": "2022-12-21T17:21:30+05:30"
+                "last_attempted_on": "2022-12-21T17:21:30+05:30",
+                "showSolution": false,
+                "solutionShown": false,
+                "isSelected": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ]
             },
             {
                 "is_bookmarked": false,
@@ -256,28 +298,32 @@
                         "choiceId": 939797,
                         "choice": "$$4xy\\, -\\, 3y\\, +\\, 5xy^2$$",
                         "image": "",
-                        "isRight": true
+                        "isRight": true,
+                        "isSelect1": false
                     },
                     {
                         "label": "B",
                         "choiceId": 939798,
                         "choice": "$$4xy\\, +\\, 3y\\, -\\, 5xy^2$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "C",
                         "choiceId": 939799,
                         "choice": "$$8xy\\, +\\, 3y\\, -\\,5xy^2$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "D",
                         "choiceId": 939800,
                         "choice": "$$4xy\\, -\\, 3y\\, -\\,5xy^2$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     }
                 ],
                 "multiple_correct": false,
@@ -301,7 +347,17 @@
                 "level": 3,
                 "solution_rating": 0,
                 "disable_bookmark": false,
-                "last_attempted_on": "2022-12-21T17:21:51+05:30"
+                "last_attempted_on": "2022-12-21T17:21:51+05:30",
+                "showSolution": false,
+                "solutionShown": false,
+                "isSelected": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ]
             },
             {
                 "is_bookmarked": false,
@@ -329,28 +385,32 @@
                         "choiceId": 1537520,
                         "choice": "$$3$$",
                         "image": "",
-                        "isRight": true
+                        "isRight": true,
+                        "isSelect1": false
                     },
                     {
                         "label": "B",
                         "choiceId": 1537521,
                         "choice": "$$3x$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "C",
                         "choiceId": 1537522,
                         "choice": "$$\\displaystyle 3x^{2} $$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "D",
                         "choiceId": 1537523,
                         "choice": "$$\\displaystyle\\frac{3}{x}$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     }
                 ],
                 "multiple_correct": false,
@@ -373,7 +433,17 @@
                 "sequenceNo": 5,
                 "level": 3,
                 "solution_rating": 0,
-                "disable_bookmark": false
+                "disable_bookmark": false,
+                "showSolution": false,
+                "solutionShown": false,
+                "isSelected": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ]
             },
             {
                 "is_bookmarked": false,
@@ -401,28 +471,32 @@
                         "choiceId": 893899,
                         "choice": "$$\\displaystyle \\frac{7}{2}yz+7xyz^{2}+8xyz$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "B",
                         "choiceId": 893900,
                         "choice": "$$\\displaystyle -\\frac{7}{2}xz+7xyz^{3}-\\frac{8yz^{2}}{x}$$",
                         "image": "",
-                        "isRight": true
+                        "isRight": true,
+                        "isSelect1": false
                     },
                     {
                         "label": "C",
                         "choiceId": 893901,
                         "choice": "$$\\displaystyle -\\frac{7}{2}xz-7xyz^{3}+\\frac{8yz^{2}}{x}$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "D",
                         "choiceId": 893902,
                         "choice": "$$\\displaystyle \\frac{7}{2}xz-7xyz^{3}-\\frac{8yz^{2}}{x}$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     }
                 ],
                 "multiple_correct": false,
@@ -445,7 +519,17 @@
                 "sequenceNo": 6,
                 "level": 3,
                 "solution_rating": 0,
-                "disable_bookmark": false
+                "disable_bookmark": false,
+                "showSolution": false,
+                "solutionShown": false,
+                "isSelected": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ]
             },
             {
                 "is_bookmarked": false,
@@ -474,28 +558,32 @@
                         "choiceId": 4002269,
                         "choice": "$$\\dfrac{7}{34}y^{2}$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "B",
                         "choiceId": 4002270,
                         "choice": "$$\\dfrac{34}{7}y^{4}$$",
                         "image": "",
-                        "isRight": true
+                        "isRight": true,
+                        "isSelect1": false
                     },
                     {
                         "label": "C",
                         "choiceId": 4002271,
                         "choice": "$$\\dfrac{7}{34}y^{}$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "D",
                         "choiceId": 4002272,
                         "choice": "$$\\dfrac{7}{34}y^{3}$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     }
                 ],
                 "multiple_correct": false,
@@ -518,7 +606,17 @@
                 "sequenceNo": 7,
                 "level": 3,
                 "solution_rating": 0,
-                "disable_bookmark": false
+                "disable_bookmark": false,
+                "showSolution": false,
+                "solutionShown": false,
+                "isSelected": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ]
             },
             {
                 "is_bookmarked": false,
@@ -547,28 +645,32 @@
                         "choiceId": 4822598,
                         "choice": "$$2p +4 $$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "B",
                         "choiceId": 4822599,
                         "choice": "$$ 2p - 4 $$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "C",
                         "choiceId": 4822600,
                         "choice": "$$p+2$$",
                         "image": "",
-                        "isRight": true
+                        "isRight": true,
+                        "isSelect1": false
                     },
                     {
                         "label": "D",
                         "choiceId": 4822601,
                         "choice": "$$p-2$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     }
                 ],
                 "multiple_correct": false,
@@ -591,7 +693,17 @@
                 "sequenceNo": 8,
                 "level": 3,
                 "solution_rating": 0,
-                "disable_bookmark": false
+                "disable_bookmark": false,
+                "showSolution": false,
+                "solutionShown": false,
+                "isSelected": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ]
             },
             {
                 "is_bookmarked": false,
@@ -619,28 +731,32 @@
                         "choiceId": 1027507,
                         "choice": "$$6x+y$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "B",
                         "choiceId": 1250006,
                         "choice": "$$6x$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "C",
                         "choiceId": 1250007,
                         "choice": "$$6xy$$",
                         "image": "",
-                        "isRight": true
+                        "isRight": true,
+                        "isSelect1": false
                     },
                     {
                         "label": "D",
                         "choiceId": 1250008,
                         "choice": "$$6y$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     }
                 ],
                 "multiple_correct": false,
@@ -663,7 +779,17 @@
                 "sequenceNo": 9,
                 "level": 3,
                 "solution_rating": 0,
-                "disable_bookmark": false
+                "disable_bookmark": false,
+                "showSolution": false,
+                "solutionShown": false,
+                "isSelected": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ]
             },
             {
                 "is_bookmarked": false,
@@ -691,28 +817,32 @@
                         "choiceId": 4822582,
                         "choice": "$$ 1/4 pr$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "B",
                         "choiceId": 4822583,
                         "choice": "$$3/4pr$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     },
                     {
                         "label": "C",
                         "choiceId": 4822584,
                         "choice": "$$pr^{4}/2$$",
                         "image": "",
-                        "isRight": true
+                        "isRight": true,
+                        "isSelect1": false
                     },
                     {
                         "label": "D",
                         "choiceId": 4822585,
                         "choice": "$$ 2pr$$",
                         "image": "",
-                        "isRight": false
+                        "isRight": false,
+                        "isSelect1": false
                     }
                 ],
                 "multiple_correct": false,
@@ -735,7 +865,17 @@
                 "sequenceNo": 10,
                 "level": 3,
                 "solution_rating": 0,
-                "disable_bookmark": false
+                "disable_bookmark": false,
+                "showSolution": false,
+                "solutionShown": false,
+                "isSelected": false,
+                "attemptedAnswer": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ]
             }
         ],
         "test_type": "question bank",

@@ -17,8 +17,6 @@
                 "passage_image": "",
                 "passage_header": "",
                 "passage_footer": "",
-                "showSolution": false,
-                "solutionShown": false,
                 "assertion": "",
                 "reason": "",
                 "questionId": 476724,
@@ -32,6 +30,8 @@
                 "solution": "<table class=\"table table-bordered\"><tbody><tr><td>$$p$$</td><td>$$q$$&#160;</td><td>$$\\sim p$$&#160;</td><td>$$\\sim p \\wedge q$$&#160;</td><td>&#160;<span>$$p \\rightarrow q$$&#160;</span></td><td><span>$$q \\rightarrow p$$&#160;</span>&#160;</td><td>&#160;$$\\sim (p \\rightarrow q)$$</td><td>&#160;<span>$$\\sim (q \\rightarrow p)$$</span></td></tr><tr><td>T</td><td>T&#160;</td><td>F&#160;</td><td>F&#160;</td><td>T&#160;</td><td>T&#160;</td><td>F&#160;</td><td>F&#160;</td></tr><tr><td>T</td><td>F&#160;</td><td>F&#160;</td><td>F&#160;</td><td>F&#160;</td><td>T&#160;</td><td>T&#160;</td><td>F&#160;</td></tr><tr><td>F</td><td>T</td><td>T&#160;</td><td>T&#160;</td><td>T&#160;</td><td>&#160;F</td><td>F&#160;</td><td>T&#160;</td></tr><tr><td>F</td><td>F&#160;</td><td>T&#160;</td><td>F&#160;</td><td>T&#160;</td><td>T&#160;</td><td>F&#160;</td><td>F&#160;</td></tr></tbody></table>So, Column no. 4 and column no. 8 have the same truth values.<div>So, option D is correct.</div>",
                 "solution_image": "",
                 "solution_links": [],
+                "showSolution": false,
+                "solutionShown": false,
                 "attemptedAnswer": [
                     false,
                     false,

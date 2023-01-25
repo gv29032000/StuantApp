@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:toppr1/routes/app_routes.dart';
+import 'package:toppr1/screens/home/controller/home_controller.dart';
 
 import '../../../controller/chapt.controller.dart';
 
@@ -10,20 +11,82 @@ class HomePage extends StatelessWidget {
   final PolynomialVideoController controller =
       Get.put(PolynomialVideoController());
 
+  final HomeController myController = Get.put(HomeController());
+
   @override
   Widget build(BuildContext context) {
     final poly = controller.polyVideos?.data?.videos;
-
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              Theme(
+                data: Theme.of(context).copyWith(
+                    dividerTheme:
+                        const DividerThemeData(color: Colors.transparent)),
+                child: DrawerHeader(
+                  child: Column(
+                    children: [
+                      ListTile(
+                        leading: const CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              "https://img.freepik.com/free-vector/cute-shark-swimming-cartoon-icon-illustration_138676-2245.jpg?w=2000"),
+                        ),
+                        title: const Text("Jeevitha G"),
+                        subtitle: Obx(
+                          () =>
+                              Text("CLASS ${myController.selectedClass.value}"),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 250,
+                        height: 30,
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                side: BorderSide(
+                                  color: Colors.grey.shade300,
+                                ),
+                                elevation: 0,
+                                backgroundColor: Colors.white),
+                            onPressed: () {
+                              Get.toNamed(Routes.selectclasssection);
+                            },
+                            child: const Text(
+                              "CHANGE CLASS",
+                              style:
+                                  TextStyle(color: Colors.grey, fontSize: 10),
+                            )),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              buildListTile(Icons.report_problem_rounded, 'Report'),
+              GestureDetector(
+                  onTap: () {
+                    Get.toNamed(Routes.bookmarkpage);
+                  },
+                  child: buildListTile(Icons.bookmark_border, 'My Bookmarks')),
+              buildListTile(Icons.file_download_outlined, 'My Downloads'),
+              buildListTile(Icons.shopping_cart_outlined, 'My Subscription'),
+              const Divider(),
+              buildListTile(Icons.person_outline, 'Profile'),
+              buildListTile(Icons.notifications_none, 'Notifications'),
+              buildListTile(Icons.help_outline, 'Help Center'),
+              const SizedBox(
+                height: 80,
+              ),
+              const Divider(),
+              buildListTile(Icons.settings, 'Settings'),
+            ],
+          ),
+        ),
         appBar: AppBar(
+          iconTheme: const IconThemeData(color: Colors.black),
           elevation: 0,
           backgroundColor: Colors.white,
-          leading: const Icon(
-            Icons.menu,
-            color: Colors.black,
-          ),
           actions: const [
             Icon(
               Icons.search,
@@ -424,6 +487,20 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  ListTile buildListTile(IconData icon, String text) {
+    return ListTile(
+      leading: Icon(icon),
+      title: Text(
+        text,
+      ),
+      trailing: Icon(
+        Icons.arrow_forward_ios_rounded,
+        size: 12,
+        color: Colors.grey.shade300,
       ),
     );
   }
