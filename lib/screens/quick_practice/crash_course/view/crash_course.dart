@@ -31,11 +31,9 @@ class PolyCrashCoursePage extends StatelessWidget {
                     Column(
                       children: [
                         QuestionCard(
-                            seqNo: controller.crashCourse?.data?.questions
-                                    ?.elementAt(qIndex)
-                                    .sequenceNo
-                                    .toString() ??
-                                '',
+                            seqNo: qIndex < 9
+                                ? '0${qIndex + 1}'
+                                : '${(qIndex + 1)}',
                             qnText: controller.crashCourse?.data?.questions
                                     ?.elementAt(qIndex)
                                     .question ??

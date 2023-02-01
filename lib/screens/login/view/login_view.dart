@@ -34,6 +34,7 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
           body: SingleChildScrollView(
@@ -44,8 +45,8 @@ class LoginPage extends StatelessWidget {
                 Image.asset(
                   'assets/images/logo_stuant.jpg',
                   // 'https://cdn4.vectorstock.com/i/1000x1000/43/98/student-education-logo-vector-14724398.jpg',
-                  height: 50,
-                  width: 50,
+                  height: size.height * 0.08,
+                  width: size.width * 0.10,
                 ),
                 const BuildText(
                   text: 'Stuant',
@@ -54,12 +55,13 @@ class LoginPage extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: size.height * 0.05,
             ),
             SizedBox(
               // color: Colors.blue,
-              height: 420,
+
+              height: size.height * 0.52,
               width: MediaQuery.of(context).size.width,
               child: PageView.builder(
                 itemCount: imgList.length,
@@ -73,7 +75,8 @@ class LoginPage extends StatelessWidget {
                   return Column(
                     children: [
                       Container(
-                        height: 260,
+                        height: size.height * 0.32,
+                        // height: 260,
                         padding: const EdgeInsets.all(16),
                         // color: Colors.white,
                         child: ColorFiltered(
@@ -81,14 +84,16 @@ class LoginPage extends StatelessWidget {
                               Colors.white, BlendMode.dstOver),
                           child: Image.network(
                             imgList[index],
-                            height: 220,
-                            width: 220,
+                            // height: 220,
+                            height: size.height * 0.30,
+                            width: size.width * 0.64,
                             fit: BoxFit.fill,
                           ),
                         ),
                       ),
-                      const SizedBox(
-                        height: 50,
+                      SizedBox(
+                        // height: 50,
+                        height: size.height * 0.04,
                       ),
                       Padding(
                         padding: const EdgeInsets.all(10),
@@ -121,36 +126,41 @@ class LoginPage extends StatelessWidget {
                     indicators(imgList.length, controller.pageIndex.value),
               ),
             ),
-            const SizedBox(
-              height: 8,
+            SizedBox(
+              height: size.height * 0.02,
             ),
             Container(
-              height: 182,
+              height: size.height * 0.269,
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(8),
-                      topRight: Radius.circular(8))),
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(8),
+                  topRight: Radius.circular(8),
+                ),
+              ),
               child: Padding(
                 padding: const EdgeInsets.only(
                     left: 18, top: 8, right: 8, bottom: 8),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      // height: 10,
+                      height: size.height * 0.01,
                     ),
                     const BuildText(
                         text: 'Get started Using Phone number',
                         size: 16,
                         weight: FontWeight.bold),
-                    const SizedBox(
-                      height: 12,
+                    SizedBox(
+                      // height: 12,
+                      height: size.height * 0.02,
                     ),
-                    buildTextformfield(mycontroller),
-                    const SizedBox(
-                      height: 32,
+                    buildTextformfield(mycontroller, size),
+                    SizedBox(
+                      // height: 32,
+                      height: size.height * 0.04,
                     ),
                     GestureDetector(
                       onTap: () {
@@ -171,8 +181,10 @@ class LoginPage extends StatelessWidget {
                         print('helllllllo ${mycontroller.phoneNumber.value}');
                       },
                       child: Container(
-                          width: 320,
-                          height: 40,
+                          // width: 320,
+                          width: size.width * 0.9,
+                          // height: 40,
+                          height: size.height / 16,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30),
                               color: Colors.green.shade400),
@@ -208,13 +220,15 @@ class LoginPage extends StatelessWidget {
     });
   }
 
-  buildTextformfield(HomeController controller) {
+  buildTextformfield(HomeController controller, Size size) {
     return ValueListenableBuilder(
         valueListenable: controller.textcontroller,
         builder: (context, TextEditingValue value, __) {
           return Container(
-            height: 35,
-            width: 300,
+            // height: 35,
+            height: size.height * 0.05,
+            // width: 300,
+            width: size.width * 0.8,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: Colors.grey.shade400),
@@ -264,9 +278,6 @@ class LoginPage extends StatelessWidget {
                         ],
                         decoration: InputDecoration(
                             border: InputBorder.none,
-                            // errorText: controller.submitted.value
-                            //     ? controller.errorText
-                            //     : null,
                             hintStyle: TextStyle(
                                 color: Colors.grey.shade400,
                                 fontSize: 13,

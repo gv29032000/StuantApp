@@ -63,7 +63,7 @@ class SelectClassView extends StatelessWidget {
                   itemBuilder: (BuildContext context, int index) {
                     return GestureDetector(
                       onTap: () {
-                        controller.standared.value = index;
+                        controller.standared.value = index.toString();
                         controller.selectedClass.value = controller
                                 .selectClass?.data?.klassesList
                                 ?.elementAt(index)
@@ -78,9 +78,10 @@ class SelectClassView extends StatelessWidget {
                           // width: 30,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: controller.standared.value == index
-                                ? Colors.green.shade500
-                                : Colors.white,
+                            color:
+                                controller.standared.value == index.toString()
+                                    ? Colors.green.shade500
+                                    : Colors.white,
                             border: Border.all(color: Colors.grey.shade300),
                           ),
                           child: Center(

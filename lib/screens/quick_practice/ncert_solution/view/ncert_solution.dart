@@ -116,29 +116,110 @@ class NCERTSolutionPage extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              QuestionCard(
-                                  seqNo: qIndex < 9
-                                      ? '0${qIndex + 1}'
-                                      : '${(qIndex + 1)}',
-                                  qnText: controller.polyNCERTSolutions.value
-                                          .data?.questions
-                                          ?.elementAt(qIndex)
-                                          .question ??
-                                      ''),
-                              controller.polyNCERTSolutions.value.data
+                              QuestionCard1(
+                                qIndex: qIndex,
+                                seqNo: qIndex < 9
+                                    ? '0${qIndex + 1}'
+                                    : '${(qIndex + 1)}',
+                                qnText: controller.polyNCERTSolutions.value.data
+                                        ?.questions
+                                        ?.elementAt(qIndex)
+                                        .question ??
+                                    '',
+                                onTap: () {
+                                  controller
+                                      .polyNCERTSolutions.value.data?.questions
+                                      ?.elementAt(qIndex)
+                                      .isBookmarked = true;
+                                  if (controller.polyNCERTSolutions.value.data
                                           ?.questions
                                           ?.elementAt(qIndex)
-                                          .showSolution ==
-                                      true
-                                  ? SolutionCard1(quesindex: qIndex)
-                                  : const SizedBox()
+                                          .isBookmarked ==
+                                      true) {
+                                    controller.polyNCERTSolutions.value.data
+                                        ?.questions
+                                        ?.elementAt(qIndex)
+                                        .isBookmarked = false;
+                                    Get.bottomSheet(
+                                      Container(
+                                        decoration: const BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(8),
+                                              topRight: Radius.circular(8)),
+                                        ),
+                                        height: 100,
+                                        child: Column(
+                                          children: [
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                            Align(
+                                              alignment: Alignment.centerRight,
+                                              child: GestureDetector(
+                                                onTap: () {
+                                                  Get.close(1);
+                                                },
+                                                child: Icon(
+                                                  Icons.close,
+                                                  color: Colors.grey.shade400,
+                                                ),
+                                              ),
+                                            ),
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                            const BuildText(
+                                                text:
+                                                    'Removing this will also remove it from any notebook'),
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                            Divider(
+                                              color: Colors.grey.shade400,
+                                              thickness: 1.2,
+                                            ),
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                            const BuildText(
+                                              text: 'REMOVE FROM BOOKMARKS',
+                                              colors: Colors.pink,
+                                            ),
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    );
+                                  }
+                                  // if (controller.polyNCERTSolutions.value.data
+                                  //         ?.questions
+                                  //         ?.elementAt(qIndex)
+                                  //         .isBookmarked ==
+                                  //     false) {
+
+                                  // }
+                                },
+                              ),
+                              Obx(
+                                () => controller.polyNCERTSolutions.value.data
+                                            ?.questions
+                                            ?.elementAt(qIndex)
+                                            .showSolution ==
+                                        true
+                                    ? SolutionCard1(quesindex: qIndex)
+                                    : const SizedBox(),
+                              )
                             ],
                           ),
                         ],
                       ),
                     ),
                   );
-                }),
+                },
+              ),
       ),
     );
   }

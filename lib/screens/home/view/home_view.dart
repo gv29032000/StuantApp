@@ -16,6 +16,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final poly = controller.polyVideos?.data?.videos;
+
+    var size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
@@ -41,8 +43,8 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 250,
-                        height: 30,
+                        width: size.width * 0.7,
+                        height: size.height * 0.04,
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 side: BorderSide(
@@ -75,8 +77,9 @@ class HomePage extends StatelessWidget {
               buildListTile(Icons.person_outline, 'Profile'),
               buildListTile(Icons.notifications_none, 'Notifications'),
               buildListTile(Icons.help_outline, 'Help Center'),
-              const SizedBox(
-                height: 80,
+              SizedBox(
+                // height: 80,
+                height: size.height * 0.1,
               ),
               const Divider(),
               buildListTile(Icons.settings, 'Settings'),
@@ -94,7 +97,8 @@ class HomePage extends StatelessWidget {
             )
           ],
           title: Container(
-            width: 170,
+            // width: 170,
+            width: size.width * 0.4,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.teal.shade50),
@@ -127,15 +131,19 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(
-                      height: 5,
+                    SizedBox(
+                      // height: 5,
+                      height: size.height * 0.005,
                     ),
                     const Text(
                       'Learn',
                       style:
                           TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(height: 33),
+                    SizedBox(
+                      // height: 33
+                      height: size.height * 0.04,
+                    ),
                     Row(
                       children: [
                         Text(
@@ -154,22 +162,24 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      height: 15,
+                    SizedBox(
+                      height: size.height * 0.015,
                     ),
                     Column(
                       children: [
                         GestureDetector(
                             onTap: () => Get.toNamed(Routes.mathschaptpage),
                             child: SizedBox(
-                              height: 80,
-                              width: 80,
+                              height: size.height * 0.1,
+                              // height: 80,
+                              width: size.width * 0.2,
                               child: Image.asset(
                                 'assets/images/mathslogo.png',
                               ),
                             )),
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          // height: 10,
+                          height: size.height * 0.01,
                         ),
                         const Text(
                           "Maths",
@@ -178,13 +188,15 @@ class HomePage extends StatelessWidget {
                               color: Colors.black,
                               fontWeight: FontWeight.w500),
                         ),
-                        const SizedBox(
-                          height: 15,
+                        SizedBox(
+                          // height: 15,
+                          height: size.height * 0.016,
                         )
                       ],
                     ),
-                    const SizedBox(
-                      width: 25,
+                    SizedBox(
+                      // width: 25,
+                      width: size.width * 0.026,
                     ),
                   ],
                 ),
@@ -215,8 +227,9 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      // height: 10,
+                      height: size.height * 0.01,
                     ),
                     Column(
                       children:
@@ -232,8 +245,8 @@ class HomePage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(5),
                                 child: CachedNetworkImage(
                                   imageUrl: poly1?.thumbnails?.s360 ?? "",
-                                  width: 100,
-                                  height: 60,
+                                  width: size.width * 0.28,
+                                  height: size.height * 0.7,
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -280,8 +293,12 @@ class HomePage extends StatelessWidget {
                         onTap: () => Get.toNamed(Routes.polypage),
                         child: ListTile(
                           contentPadding: EdgeInsets.zero,
-                          leading: Image.asset('assets/images/mathslogo.png',
-                              height: 37, width: 37),
+                          leading: Image.asset(
+                            'assets/images/mathslogo.png',
+                            // height: 37, width: 37
+                            height: size.height * 0.06,
+                            width: size.width * 0.1,
+                          ),
                           title: const Text(
                             'Polynomials',
                             style: TextStyle(
@@ -318,14 +335,14 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 200,
+                    height: size.height * 0.26,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        const SizedBox(
-                          width: 20,
+                        SizedBox(
+                          width: size.width * 0.06,
                         ),
-                        ..._buildCourses(),
+                        ..._buildCourses(size),
                       ],
                     ),
                   )
@@ -338,7 +355,8 @@ class HomePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Container(
-                  height: 200,
+                  // height: 200,
+                  height: size.height * 0.26,
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.orangeAccent.shade200,
@@ -348,7 +366,8 @@ class HomePage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: SizedBox(
-                          width: 170,
+                          // width: 170,
+                          width: size.width * 0.5,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -359,8 +378,9 @@ class HomePage extends StatelessWidget {
                                     fontSize: 22,
                                     fontWeight: FontWeight.w600),
                               ),
-                              const SizedBox(
-                                height: 13,
+                              SizedBox(
+                                // height: 13,
+                                height: size.height * 0.02,
                               ),
                               Text(
                                 'Explore concepts from trending chapters',
@@ -396,11 +416,11 @@ class HomePage extends StatelessWidget {
                 thickness: 8,
                 color: Colors.grey.shade100,
               ),
-              const SizedBox(
-                height: 15,
+              SizedBox(
+                height: size.height * 0.019,
               ),
               Container(
-                height: 80,
+                height: size.height * 0.1,
                 color: Colors.grey.shade100,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20.0, right: 20),
@@ -428,13 +448,14 @@ class HomePage extends StatelessWidget {
                                         fontWeight: FontWeight.bold))
                               ],
                             ),
-                            const SizedBox(
-                              height: 5,
+                            SizedBox(
+                              // height: 5,
+                              height: size.height * 0.005,
                             ),
                             Text(
                               'Better learning. Better results.',
                               style: TextStyle(
-                                  fontSize: 12,
+                                  fontSize: 10,
                                   color: Colors.grey.shade500,
                                   fontWeight: FontWeight.w400),
                             )
@@ -506,7 +527,7 @@ class HomePage extends StatelessWidget {
   }
 }
 
-List<Widget> _buildCourses() {
+List<Widget> _buildCourses(Size size) {
   final PolynomialVideoController controller =
       Get.find<PolynomialVideoController>();
   final poly = controller.polyVideos?.data?.videos;
@@ -528,14 +549,18 @@ List<Widget> _buildCourses() {
                     borderRadius: BorderRadius.circular(3),
                     child: CachedNetworkImage(
                         imageUrl: poly?.thumbnails?.s360 ?? '',
-                        height: 100,
-                        width: 180,
+                        // height: 100,
+                        height: size.height * 0.132,
+                        // width: 180,
+                        width: size.width * 0.5,
                         fit: BoxFit.cover),
                   ),
                 ),
                 SizedBox(
-                  height: 40,
-                  width: 180,
+                  // height: 40,
+                  height: size.height * 0.055,
+                  // width: 180,
+                  width: size.width * 0.5,
                   child: Text(
                     poly?.title ?? '',
                     style: const TextStyle(
@@ -545,7 +570,10 @@ List<Widget> _buildCourses() {
                     ),
                   ),
                 ),
-                const SizedBox(height: 3),
+                SizedBox(
+                  height: size.height * 0.003,
+                  //height: 3
+                ),
                 Text(
                   '${poly?.durationMin} mins',
                   style: TextStyle(

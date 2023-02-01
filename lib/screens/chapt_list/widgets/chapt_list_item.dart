@@ -63,7 +63,7 @@ class ChapListItem extends StatelessWidget {
                   '${controller.mathsChaptList?.data?.chapters?.elementAt(index).nVideos ?? ''} Videos',
                   style: TextStyle(
                       color: Colors.grey.shade500,
-                      fontSize: 14,
+                      fontSize: 13,
                       fontWeight: FontWeight.w500),
                 ),
                 const SizedBox(
@@ -81,7 +81,7 @@ class ChapListItem extends StatelessWidget {
                   '${controller.mathsChaptList?.data?.chapters?.elementAt(index).nConcepts ?? ''} Concepts',
                   style: TextStyle(
                       color: Colors.grey.shade500,
-                      fontSize: 14,
+                      fontSize: 13,
                       fontWeight: FontWeight.w500),
                 ),
                 const SizedBox(
@@ -99,7 +99,7 @@ class ChapListItem extends StatelessWidget {
                   '${controller.mathsChaptList?.data?.chapters?.elementAt(index).nExercise ?? ''} Exercises',
                   style: TextStyle(
                       color: Colors.grey.shade500,
-                      fontSize: 14,
+                      fontSize: 13,
                       fontWeight: FontWeight.w500),
                 ),
               ]),

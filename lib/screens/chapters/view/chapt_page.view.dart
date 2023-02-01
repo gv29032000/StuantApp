@@ -244,7 +244,7 @@ class PolynomialPage extends StatelessWidget {
                                   Icons.star,
                                   myController.previousQuestionPapers?.data
                                           ?.pageTitle ??
-                                      '')),
+                                      'Previous Papers')),
                           const SizedBox(
                             width: 35,
                           ),

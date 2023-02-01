@@ -16,7 +16,9 @@ class HomeController extends GetxController {
 
   var classSelected = false.obs;
   var selectedClassList = [].obs;
-  var standared = 0.obs;
+  // var standared = 0.obs;
+  var standared = ''.obs;
+
   var valuefirst = false.obs;
   var phoneNumber = ''.obs;
   var userName = ''.obs;

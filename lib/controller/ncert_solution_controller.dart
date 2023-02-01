@@ -22,6 +22,8 @@ class NCERTSolutionController extends GetxController {
     listtoPage.value = true;
   }
 
+  inc() {}
+
   // viewSolution(int index) {
   //   polyNCERTSolutions.value.data?.questions?.elementAt(index).solutionShown =
   //       true;
