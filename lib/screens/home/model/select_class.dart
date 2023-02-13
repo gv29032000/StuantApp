@@ -13,8 +13,8 @@ class SelectClass {
   SelectClass(
       {this.data, this.status, this.statusCode, this.message, this.errorCode});
 
-  factory SelectClass.fromJson(Map<String, dynamic> Json) =>
-      _$SelectClassFromJson(Json);
+  factory SelectClass.fromJson(Map<String, dynamic> json) =>
+      _$SelectClassFromJson(json);
   Map<String, dynamic> toJson() => _$SelectClassToJson(this);
 }
 
@@ -39,7 +39,7 @@ class Data {
       this.campaignId,
       this.selectedValues});
 
-  factory Data.fromJson(Map<String, dynamic> Json) => _$DataFromJson(Json);
+  factory Data.fromJson(Map<String, dynamic> json) => _$DataFromJson(json);
   Map<String, dynamic> toJson() => _$DataToJson(this);
 }
 
@@ -51,8 +51,8 @@ class KlassesList {
 
   KlassesList({this.id, this.klass, this.klassInt});
 
-  factory KlassesList.fromJson(Map<String, dynamic> Json) =>
-      _$KlassesListFromJson(Json);
+  factory KlassesList.fromJson(Map<String, dynamic> json) =>
+      _$KlassesListFromJson(json);
   Map<String, dynamic> toJson() => _$KlassesListToJson(this);
 }
 
@@ -64,8 +64,8 @@ class CountryList {
 
   CountryList({this.name, this.isoCode, this.phoneCode});
 
-  factory CountryList.fromJson(Map<String, dynamic> Json) =>
-      _$CountryListFromJson(Json);
+  factory CountryList.fromJson(Map<String, dynamic> json) =>
+      _$CountryListFromJson(json);
   Map<String, dynamic> toJson() => _$CountryListToJson(this);
 }
 
@@ -77,8 +77,8 @@ class DemoDatesList {
 
   DemoDatesList({this.id, this.date, this.tag});
 
-  factory DemoDatesList.fromJson(Map<String, dynamic> Json) =>
-      _$DemoDatesListFromJson(Json);
+  factory DemoDatesList.fromJson(Map<String, dynamic> json) =>
+      _$DemoDatesListFromJson(json);
   Map<String, dynamic> toJson() => _$DemoDatesListToJson(this);
 }
 
@@ -90,8 +90,8 @@ class DemoTimeSlotsList {
 
   DemoTimeSlotsList({this.id, this.slot, this.disabled});
 
-  factory DemoTimeSlotsList.fromJson(Map<String, dynamic> Json) =>
-      _$DemoTimeSlotsListFromJson(Json);
+  factory DemoTimeSlotsList.fromJson(Map<String, dynamic> json) =>
+      _$DemoTimeSlotsListFromJson(json);
   Map<String, dynamic> toJson() => _$DemoTimeSlotsListToJson(this);
 }
 
@@ -138,8 +138,8 @@ class CurrentPage {
       this.isOptional,
       this.showTwoButtons});
 
-  factory CurrentPage.fromJson(Map<String, dynamic> Json) =>
-      _$CurrentPageFromJson(Json);
+  factory CurrentPage.fromJson(Map<String, dynamic> json) =>
+      _$CurrentPageFromJson(json);
   Map<String, dynamic> toJson() => _$CurrentPageToJson(this);
 }
 
@@ -164,7 +164,7 @@ class Entity {
       // this.popularValues,
       this.additionalData});
 
-  factory Entity.fromJson(Map<String, dynamic> Json) => _$EntityFromJson(Json);
+  factory Entity.fromJson(Map<String, dynamic> json) => _$EntityFromJson(json);
   Map<String, dynamic> toJson() => _$EntityToJson(this);
 }
 
@@ -172,8 +172,8 @@ class Entity {
 class AdditionalData {
   AdditionalData({dynamic});
 
-  factory AdditionalData.fromJson(Map<String, dynamic> Json) =>
-      _$AdditionalDataFromJson(Json);
+  factory AdditionalData.fromJson(Map<String, dynamic> json) =>
+      _$AdditionalDataFromJson(json);
   Map<String, dynamic> toJson() => _$AdditionalDataToJson(this);
 }
 
@@ -190,8 +190,8 @@ class SelectedValues {
       // this.parentEmail,
       this.location});
 
-  factory SelectedValues.fromJson(Map<String, dynamic> Json) =>
-      _$SelectedValuesFromJson(Json);
+  factory SelectedValues.fromJson(Map<String, dynamic> json) =>
+      _$SelectedValuesFromJson(json);
   Map<String, dynamic> toJson() => _$SelectedValuesToJson(this);
 }
 
@@ -202,7 +202,7 @@ class Location {
 
   Location({this.name, this.isInDefaultList});
 
-  factory Location.fromJson(Map<String, dynamic> Json) =>
-      _$LocationFromJson(Json);
+  factory Location.fromJson(Map<String, dynamic> json) =>
+      _$LocationFromJson(json);
   Map<String, dynamic> toJson() => _$LocationToJson(this);
 }

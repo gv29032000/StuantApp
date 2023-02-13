@@ -7,9 +7,11 @@ import 'package:toppr1/screens/previous_paper/model/previous_paper.dart';
 import 'package:toppr1/screens/previous_paper/widgets/answer_option.dart';
 import 'package:toppr1/screens/previous_paper/widgets/build_text.dart';
 
+import '../../quick_practice/close_card.dart';
+
 class PreviousPapperView extends StatelessWidget {
   PreviousPapperView({super.key});
-  PreviousQuestionPaperController myController = Get.find();
+  final PreviousQuestionPaperController myController = Get.find();
 
   final PolynomialVideoController controller =
       Get.find<PolynomialVideoController>();
@@ -33,7 +35,7 @@ class PreviousPapperView extends StatelessWidget {
           ),
           IconButton(
               onPressed: () {
-                _buildExitdialog();
+                Get.dialog(const CloseCard());
               },
               icon: _buildicon(
                 Icons.close,
@@ -265,9 +267,6 @@ class PreviousPapperView extends StatelessWidget {
                                           questionIndex: index,
                                           ansIndex: index1,
                                           onPressed: () {
-                                            print(
-                                                'hello${questions?.elementAt(index).selectedAns}');
-
                                             questions
                                                 ?.elementAt(index)
                                                 .selectedAns

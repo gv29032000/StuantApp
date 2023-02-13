@@ -9,10 +9,9 @@ import 'package:toppr1/screens/quick_practice/widgets/question_card.dart';
 
 class PolyCrashCoursePage extends StatelessWidget {
   PolyCrashCoursePage({super.key});
-  CrashCourseController controller = Get.find();
+  final CrashCourseController controller = Get.find();
   @override
   Widget build(BuildContext context) {
-    var questions = controller.crashCourse?.data?.questions;
     return QuickPracticeCard(
       child1: BottomButtonCard(),
       child: PageView.builder(
@@ -151,7 +150,7 @@ class PolyCrashCoursePage extends StatelessWidget {
                                       (BuildContext context, int optIndex) {
                                     AnswerStatus status =
                                         AnswerStatus.notanswered;
-                                    print('NotSelected');
+
                                     if (controller.crashCourse?.data?.questions
                                                 ?.elementAt(qIndex)
                                                 .choices
@@ -164,7 +163,6 @@ class PolyCrashCoursePage extends StatelessWidget {
                                                 ?.elementAt(optIndex) ==
                                             true) {
                                       status = AnswerStatus.selected;
-                                      print('Status $status');
                                     }
                                     return OptionCard(
                                       index: qIndex,
@@ -185,7 +183,6 @@ class PolyCrashCoursePage extends StatelessWidget {
                                               .choice ??
                                           '',
                                       press: () {
-                                        print('Selecteddddddd');
                                         controller.selectedAnswer(
                                             qIndex, optIndex);
                                       },

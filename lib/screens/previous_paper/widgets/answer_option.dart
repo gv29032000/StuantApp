@@ -20,7 +20,7 @@ class AnswerOption extends StatelessWidget {
   final AnswerStatus? status;
   final Function() onPressed;
 
-  PreviousQuestionPaperController myController = Get.find();
+  final PreviousQuestionPaperController myController = Get.find();
   @override
   Widget build(BuildContext context) {
     var questions = myController.previousQuestionPapers?.data?.questions;
@@ -136,13 +136,12 @@ class NotAnswerCard extends StatelessWidget {
   final Function() onPressed;
   final AnswerStatus status;
 
-  PreviousQuestionPaperController myController = Get.find();
+  final PreviousQuestionPaperController myController = Get.find();
 
   @override
   Widget build(BuildContext context) {
     var questions = myController.previousQuestionPapers?.data?.questions;
     Color backgroundColor = Theme.of(context).primaryColor;
-    Color borderColor = Theme.of(context).primaryColor;
     Color labelColor = Colors.grey.shade300;
     Color labelTextColor = Colors.black;
     switch (status) {

@@ -9,10 +9,10 @@ class PreviousQuestionPaperController extends GetxController {
   PreviousQuestionPapers? previousQuestionPapers;
   Questions? question;
   final Map<int, bool> questionIsAnswerd = {};
-  final List<int> list_status = <int>[0, 1, 2, 3].obs;
+  final List<int> liststatus = <int>[0, 1, 2, 3].obs;
   RxList attemptedQuestions = [].obs;
   // Set<String> physical_status_selected = {};
-  RxMap list_status_selected = {}.obs;
+  RxMap liststatusselected = {}.obs;
   Rxn<Questions> currentQuestion = Rxn<Questions>();
   RxSet addansIndex = <int>{}.obs;
   RxList<bool> ansAttempted = [
@@ -115,7 +115,6 @@ class PreviousQuestionPaperController extends GetxController {
         .choices
         ?.elementAt(ansindex)
         .isSelect1);
-    print('hiiii $selecteOptionList');
 
     previousQuestionPapers?.data?.questions
         ?.elementAt(quesindex)
@@ -158,7 +157,6 @@ class PreviousQuestionPaperController extends GetxController {
     int quesIndex,
     int id,
   ) {
-    print('hello1 $selectedAnsId');
     selectedId.value = id;
     for (dynamic i = 0;
         i <
@@ -167,29 +165,24 @@ class PreviousQuestionPaperController extends GetxController {
                 .choices
                 ?.length;
         i++) {
-      print(
-          'hello2 ${previousQuestionPapers?.data?.questions?.elementAt(quesIndex).choices?.elementAt(i).choiceId}');
       if (previousQuestionPapers?.data?.questions
               ?.elementAt(quesIndex)
               .choices
               ?.elementAt(i)
               .isRight ==
           true) {
-        print('Hellooooooo');
         selectedAnsId.value = previousQuestionPapers?.data?.questions
                 ?.elementAt(quesIndex)
                 .choices
                 ?.elementAt(i)
                 .choiceId ??
             0;
-        print('hello $selectedAnsId');
       }
     }
     if (selectedAnsId.value == id) {
       previousQuestionPapers?.data?.questions
           ?.elementAt(quesIndex)
           .correctlyAnswered = true;
-      print('hello Your answer is corret');
     } else if (selectedAnsId.value != id) {
       previousQuestionPapers?.data?.questions
           ?.elementAt(quesIndex)
@@ -197,7 +190,6 @@ class PreviousQuestionPaperController extends GetxController {
       previousQuestionPapers?.data?.questions
           ?.elementAt(quesIndex)
           .alreadyAttempted = true;
-      print('hello Your Ans is Wrong');
     }
   }
 

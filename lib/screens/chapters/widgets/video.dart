@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 
 class MyVideo extends StatelessWidget {
   MyVideo({super.key});
-  dynamic url = Get.parameters['youtubeUrl'];
-  dynamic title = Get.parameters['title'];
+  final dynamic url = Get.parameters['youtubeUrl'];
+  final dynamic title = Get.parameters['title'];
 
   @override
   Widget build(BuildContext context) {

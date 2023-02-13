@@ -68,7 +68,6 @@ class CrashCourseController extends GetxController {
     int quesIndex,
     int id,
   ) {
-    print('hello1 $selectedAnsId');
     selectedId.value = id;
     for (dynamic i = 0;
         i < crashCourse?.data?.questions?.elementAt(quesIndex).choices?.length;
@@ -81,26 +80,22 @@ class CrashCourseController extends GetxController {
               ?.elementAt(i)
               .isRight ==
           true) {
-        print('Hellooooooo');
         selectedAnsId.value = crashCourse?.data?.questions
                 ?.elementAt(quesIndex)
                 .choices
                 ?.elementAt(i)
                 .choiceId ??
             0;
-        print('hello $selectedAnsId');
       }
     }
     if (selectedAnsId.value == id) {
       crashCourse?.data?.questions?.elementAt(quesIndex).correctlyAnswered =
           true;
-      print('hello Your answer is corret');
     } else if (selectedAnsId.value != id) {
       crashCourse?.data?.questions?.elementAt(quesIndex).correctlyAnswered =
           false;
       crashCourse?.data?.questions?.elementAt(quesIndex).alreadyAttempted =
           true;
-      print('hello Your Ans is Wrong');
     }
   }
 

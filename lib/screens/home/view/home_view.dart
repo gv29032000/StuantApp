@@ -530,7 +530,6 @@ class HomePage extends StatelessWidget {
 List<Widget> _buildCourses(Size size) {
   final PolynomialVideoController controller =
       Get.find<PolynomialVideoController>();
-  final poly = controller.polyVideos?.data?.videos;
   return List.generate(
     controller.polyVideos?.data?.videos?.length ?? 0,
     (index) {

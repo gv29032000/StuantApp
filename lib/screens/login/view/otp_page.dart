@@ -7,7 +7,7 @@ import '../../../routes/app_routes.dart';
 
 class OTPPage extends StatelessWidget {
   OTPPage({super.key});
-  HomeController controller = Get.find();
+  final HomeController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -180,13 +180,7 @@ class OTPPage extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    // if (controller.userName.value.isEmpty) {
-                    //   Get.defaultDialog(middleText: 'Please select the class');
-                    // } else {
-
-                    // Get.toNamed(Routes.home);
                     Get.offNamed(Routes.home);
-                    // }
                   },
                   child: Container(
                     // width: 320,
@@ -293,16 +287,12 @@ class OTPPage extends StatelessWidget {
                       itemBuilder: (BuildContext context, int index) {
                         return GestureDetector(
                           onTap: () {
-                            print('Heloooo ${controller.standared}');
                             controller.standared.value = index.toString();
                             controller.selectedClass.value = controller
                                     .selectClass?.data?.klassesList
                                     ?.elementAt(index)
                                     .klass ??
                                 '';
-
-                            print(
-                                'Hellloo ${controller.selectedClassList.value}');
                           },
                           child: Obx(
                             () => Container(

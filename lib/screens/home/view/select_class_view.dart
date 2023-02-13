@@ -5,8 +5,8 @@ import 'package:toppr1/screens/previous_paper/widgets/build_text.dart';
 
 class SelectClassView extends StatelessWidget {
   SelectClassView({super.key});
-  HomeController controller = Get.find();
-  int selectcard = -1;
+  final HomeController controller = Get.find();
+  final int selectcard = -1;
 
   @override
   Widget build(BuildContext context) {
@@ -69,8 +69,6 @@ class SelectClassView extends StatelessWidget {
                                 ?.elementAt(index)
                                 .klass ??
                             '';
-
-                        print('Hellloo ${controller.selectedClassList.value}');
                       },
                       child: Obx(
                         () => Container(
@@ -85,15 +83,16 @@ class SelectClassView extends StatelessWidget {
                             border: Border.all(color: Colors.grey.shade300),
                           ),
                           child: Center(
-                              child: BuildText(
-                            text: controller.selectClass?.data?.klassesList
-                                    ?.elementAt(index)
-                                    .klass ??
-                                '9',
-                            colors: Colors.black,
-                            weight: FontWeight.bold,
-                            size: 22,
-                          )),
+                            child: BuildText(
+                              text: controller.selectClass?.data?.klassesList
+                                      ?.elementAt(index)
+                                      .klass ??
+                                  '9',
+                              colors: Colors.black,
+                              weight: FontWeight.bold,
+                              size: 22,
+                            ),
+                          ),
                         ),
                       ),
                     );
@@ -102,12 +101,16 @@ class SelectClassView extends StatelessWidget {
           ),
           const Spacer(),
           SizedBox(
-              width: 240,
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.green.shade500),
-                  onPressed: () {},
-                  child: const BuildText(text: 'Next')))
+            width: 240,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green.shade500),
+              onPressed: () {
+                Get.back();
+              },
+              child: const BuildText(text: 'NEXT'),
+            ),
+          ),
         ],
       ),
     );

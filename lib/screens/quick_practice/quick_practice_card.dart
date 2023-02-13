@@ -41,8 +41,7 @@ class QuickPracticeCard extends StatelessWidget {
           ),
           GestureDetector(
               onTap: () {
-                print('Hello Close Card');
-                Get.dialog(const CloseCard());
+                print('close card');
               },
               child: buildActions(Icons.close)),
           const SizedBox(
@@ -99,12 +98,7 @@ class QuickPracticeCard1 extends StatelessWidget {
           const SizedBox(
             width: 10,
           ),
-          GestureDetector(
-              onTap: () {
-                print('Hello Close Card');
-                Get.dialog(const CloseCard());
-              },
-              child: buildActions(Icons.close)),
+          buildActions(Icons.close),
           const SizedBox(
             width: 20,
           ),
@@ -130,6 +124,7 @@ class QuickPracticeCard1 extends StatelessWidget {
 buildActions(IconData icon) {
   return GestureDetector(
     onTap: () {
+      Get.dialog(const CloseCard());
       // controller!.isList.value = !controller.isList.value;
     },
     child: Container(

@@ -6,6 +6,18 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:toppr1/screens/quick_practice/ncert_solution/model/ncert_solutions.dart';
 
+class QuestionItem {
+  int questionId;
+  bool bookmark;
+  String questionText;
+  String solution;
+  QuestionItem(
+      {required this.questionId,
+      required this.bookmark,
+      required this.questionText,
+      required this.solution});
+}
+
 class NCERTSolutionController extends GetxController {
   // Rx<PolyNCERTSolutions> polyNCERTSolutions;
   // final ncertSol = List<PolyNCERTSolutions>;
@@ -17,6 +29,7 @@ class NCERTSolutionController extends GetxController {
   var first = ''.obs;
   var isList = false.obs;
   var listtoPage = false.obs;
+  List<QuestionItem> questions = [];
 
   isListToPage(int index) {
     listtoPage.value = true;
@@ -35,6 +48,15 @@ class NCERTSolutionController extends GetxController {
           .showSolution = true;
     }));
     update();
+  }
+
+  addBookmark(int id, bool bookmark, String questionText, String solution) {
+    questions.add(QuestionItem(
+        questionId: id,
+        bookmark: bookmark,
+        questionText: questionText,
+        solution: solution));
+    debugPrint('hiiiiiiii  $questions');
   }
 
   Future<bool?> solutionCall(int index) async {
@@ -79,7 +101,6 @@ class NCERTSolutionController extends GetxController {
         await rootBundle.loadString('json/maths/ncert_solutions.json');
     polyNCERTSolutions.value =
         PolyNCERTSolutions.fromJson(jsonDecode(response));
-    print('Hiii $response');
     update();
   }
 }

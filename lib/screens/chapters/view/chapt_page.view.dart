@@ -13,11 +13,12 @@ class PolynomialPage extends StatelessWidget {
   final PolynomialVideoController controller =
       Get.find<PolynomialVideoController>();
 
-  PreviousQuestionPaperController myController =
+  final PreviousQuestionPaperController myController =
       Get.put(PreviousQuestionPaperController());
 
-  CrashCourseController crashController = Get.put(CrashCourseController());
-  NCERTSolutionController ncertSolutionController =
+  final CrashCourseController crashController =
+      Get.put(CrashCourseController());
+  final NCERTSolutionController ncertSolutionController =
       Get.put(NCERTSolutionController());
 
   @override

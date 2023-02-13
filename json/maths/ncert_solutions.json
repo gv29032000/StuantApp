@@ -10,7 +10,7 @@
         "end": 10,
         "questions": [
             {
-                "is_bookmarked": true,
+                "isBookmarked": false,
                 "question": "Find and correct errors of the following mathematical expressions:<br>$$2x+3y =5xy$$",
                 "question_style": "subjective",
                 "passage": "",
@@ -19,7 +19,7 @@
                 "passage_footer": "",
                 "assertion": "",
                 "reason": "",
-                "question_id": 463774,
+                "questionId": 463774,
                 "bloom": "application",
                 "already_attempted": false,
                 "correctly_answered": false,
@@ -57,7 +57,7 @@
                 "last_attempted_on": "2022-12-23T15:05:06+05:30"
             },
             {
-                "is_bookmarked": false,
+                "isBookmarked": false,
                 "question": "Find and correct errors of the following mathematical expressions:<br/>$$ \\dfrac{3x}{3x+2} =\\dfrac12 $$",
                 "question_style": "subjective",
                 "passage": "",
@@ -66,7 +66,7 @@
                 "passage_footer": "",
                 "assertion": "",
                 "reason": "",
-                "question_id": 463789,
+                "questionId": 463789,
                 "bloom": "application",
                 "already_attempted": false,
                 "correctly_answered": false,
@@ -115,7 +115,7 @@
                 ],
                 "hint": "",
                 "question": "Find and correct errors of the following mathematical expressions:<br>$$ \\dfrac{3x^{2}}{3x^{2}} =0&nbsp;$$",
-                "is_bookmarked": false,
+                "isBookmarked": false,
                 "passage": "",
                 "question_status": "published",
                 "solution_links": [],
@@ -134,7 +134,7 @@
                 "solution": "<span>The statement is incorrect. Like terms after cancellation leave remainder as $$1$$.</span><br/><span>Therefore the correct statement is</span><br/><span>$$ \\dfrac{3x^{2}}{3x^{2}} =1 $$</span>",
                 "choices": [],
                 "question_linked": false,
-                "question_id": 463787,
+                "questionId": 463787,
                 "can_ask_doubt": true,
                 "solutionShown": false,
                 "sequenceNo": 3,
@@ -143,7 +143,7 @@
                 "disable_bookmark": false
             },
             {
-                "is_bookmarked": false,
+                "isBookmarked": false,
                 "question": "Find and correct errors of the following mathematical expressions:<br>$$x+2x+3x = 5x$$",
                 "question_style": "subjective",
                 "passage": "",
@@ -152,7 +152,7 @@
                 "passage_footer": "",
                 "assertion": "",
                 "reason": "",
-                "question_id": 463775,
+                "questionId": 463775,
                 "bloom": "application",
                 "already_attempted": false,
                 "correctly_answered": false,
@@ -189,7 +189,7 @@
                 "disable_bookmark": false
             },
             {
-                "is_bookmarked": false,
+                "isBookmarked": false,
                 "question": "Find and correct errors of the following mathematical expressions:<br>$$5y+2y+y-7y =0$$",
                 "question_style": "subjective",
                 "passage": "",
@@ -198,7 +198,7 @@
                 "passage_footer": "",
                 "assertion": "",
                 "reason": "",
-                "question_id": 463776,
+                "questionId": 463776,
                 "bloom": "application",
                 "already_attempted": false,
                 "correctly_answered": false,
@@ -235,7 +235,7 @@
                 "disable_bookmark": false
             },
             {
-                "is_bookmarked": false,
+                "isBookmarked": false,
                 "question": "Find and correct errors of the following mathematical expressions:<br>$$ \\dfrac{4x+5}{4x} =5 $$",
                 "question_style": "subjective",
                 "passage": "",
@@ -245,7 +245,7 @@
                 "showSolution": false,
                 "assertion": "",
                 "reason": "",
-                "question_id": 463791,
+                "questionId": 463791,
                 "bloom": "application",
                 "already_attempted": false,
                 "correctly_answered": false,
@@ -281,7 +281,7 @@
                 "disable_bookmark": false
             },
             {
-                "is_bookmarked": false,
+                "isBookmarked": false,
                 "question": "Find and correct errors of the following mathematical expressions:<br/>$$ \\dfrac{3}{4x+3} =\\dfrac1{4x} $$",
                 "question_style": "subjective",
                 "passage": "",
@@ -290,7 +290,7 @@
                 "passage_footer": "",
                 "assertion": "",
                 "reason": "",
-                "question_id": 463790,
+                "questionId": 463790,
                 "solutionShown": false,
                 "bloom": "application",
                 "already_attempted": false,
@@ -327,7 +327,7 @@
                 "disable_bookmark": false
             },
             {
-                "is_bookmarked": false,
+                "isBookmarked": false,
                 "question": "<div>Identify the terms, their coefficients for each of the following expressions.<div><br/></div>(i) $$5xyz^2-3zy$$(ii) $$1+x+x^2$$(iii) $$4x^2y^2-4x^2y^2z^2+z^2$$(iv) $$3-pq+qr-rp$$(v) $$\\dfrac{x}{2}+\\dfrac{y}{2}-xy$$(vi) $$0.3a-0.6ab+0.5b$$",
                 "question_style": "subjective",
                 "passage": "",
@@ -338,7 +338,7 @@
                 "solutionShown": false,
                 "assertion": "",
                 "reason": "",
-                "question_id": 463493,
+                "questionId": 463493,
                 "bloom": "understanding",
                 "already_attempted": false,
                 "correctly_answered": false,
@@ -373,7 +373,7 @@
                 "disable_bookmark": false
             },
             {
-                "is_bookmarked": false,
+                "isBookmarked": false,
                 "question": "Find and correct errors of the following mathematical expressions:<br>$$ \\dfrac{3x^{2}+1}{3x^{2}} =1+1 =2&nbsp;$$",
                 "question_style": "subjective",
                 "passage": "",
@@ -383,7 +383,7 @@
                 "showSolution": false,
                 "assertion": "",
                 "reason": "",
-                "question_id": 463788,
+                "questionId": 463788,
                 "bloom": "application",
                 "already_attempted": false,
                 "correctly_answered": false,
@@ -419,7 +419,7 @@
                 "disable_bookmark": false
             },
             {
-                "is_bookmarked": false,
+                "isBookmarked": false,
                 "question": "Find and correct errors of the following mathematical expressions:<br>$$ \\dfrac{7x+5}{5} =7x $$",
                 "question_style": "subjective",
                 "passage": "",
@@ -428,7 +428,7 @@
                 "passage_footer": "",
                 "assertion": "",
                 "reason": "",
-                "question_id": 463792,
+                "questionId": 463792,
                 "showSolution": false,
                 "bloom": "application",
                 "already_attempted": false,

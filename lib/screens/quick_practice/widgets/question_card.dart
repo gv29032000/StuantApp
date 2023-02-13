@@ -84,7 +84,7 @@ class QuestionCard1 extends StatelessWidget {
   final String qnText;
   final int qIndex;
   final Function()? onTap;
-  NCERTSolutionController controller = Get.find();
+  final NCERTSolutionController controller = Get.find();
   @override
   Widget build(BuildContext context) {
     return Column(

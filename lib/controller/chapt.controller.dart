@@ -45,7 +45,6 @@ class PolynomialVideoController extends GetxController {
   // }
   void updateIndex(int newIndex) {
     listIndex = newIndex;
-    print('subi...subi $listIndex');
     update();
   }
 
@@ -62,10 +61,6 @@ class PolynomialVideoController extends GetxController {
   ) {
     selectedOptionIndex.value = oIndex;
     currentQn = crashCourse?.data?.questions?.elementAt(qIndex).sequenceNo;
-
-    print('123 $currentQn');
-    print('1234 $currIndex');
-    print('12345 $selectedOptionIndex');
   }
 
   // RxInt selectedAns = 0.obs;

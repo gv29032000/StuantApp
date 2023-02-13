@@ -134,7 +134,6 @@ class PolynomialViewAllPage extends StatelessWidget {
                             children: List.generate(
                                 controller.polySet1?.data?.videos?.length ?? 0,
                                 (index) {
-                              final poly = controller.polySet1?.data?.videos;
                               return Padding(
                                 padding: const EdgeInsets.only(
                                     bottom: 20.0, left: 20, right: 20),
@@ -178,7 +177,7 @@ class PolynomialViewAllPage extends StatelessWidget {
                                         ),
                                         SizedBox(
                                           height: 75,
-                                          width: 177,
+                                          width: 150,
                                           child: Column(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
@@ -189,11 +188,11 @@ class PolynomialViewAllPage extends StatelessWidget {
                                                         ?.elementAt(index)
                                                         .title ??
                                                     '',
+                                                maxLines: 2,
                                                 style: const TextStyle(
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 14.5,
-                                                ),
+                                                    color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 14.5),
                                               ),
                                               const SizedBox(
                                                 height: 5,
@@ -213,7 +212,7 @@ class PolynomialViewAllPage extends StatelessWidget {
                                 ),
                               );
                             }),
-                          )
+                          ),
                         ],
                       ),
                     ),
@@ -315,7 +314,7 @@ class PolynomialViewAllPage extends StatelessWidget {
                                         ),
                                         SizedBox(
                                           height: 75,
-                                          width: 177,
+                                          width: 150,
                                           child: Column(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,

@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_overrides
+// ignore_for_file: unnecessary_overrides, prefer_typing_uninitialized_variables
 
 import 'dart:convert';
 
@@ -47,7 +47,7 @@ class HomeController extends GetxController {
   }
 
   final getStorage = GetStorage();
-  var name = "";
+  var name;
   @override
   void onInit() {
     name = getStorage.read('name');
@@ -74,6 +74,5 @@ class HomeController extends GetxController {
   Future<void> fetchSelectClass() async {
     final response = await rootBundle.loadString('json/login/start.json');
     selectClass = SelectClass.fromJson(jsonDecode(response));
-    print('Hello $response');
   }
 }

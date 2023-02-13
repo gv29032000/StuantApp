@@ -74,7 +74,6 @@ class NCERTSolutionPage extends StatelessWidget {
                             //   duration: const Duration(microseconds: 200),
                             // );
                             controller.pageController.jumpToPage(index);
-                            print('Is Index :$index');
                           },
                           child: ListTile(
                             title: TeXView(
@@ -108,116 +107,143 @@ class NCERTSolutionPage extends StatelessWidget {
                         .polyNCERTSolutions.value.data?.questions?.length ??
                     0,
                 itemBuilder: (context, qIndex) {
-                  return SingleChildScrollView(
-                    child: Container(
-                      padding: const EdgeInsets.fromLTRB(20.0, 40, 20, 40),
-                      color: Colors.white,
-                      child: Stack(
-                        children: [
-                          Column(
-                            children: [
-                              QuestionCard1(
-                                qIndex: qIndex,
-                                seqNo: qIndex < 9
-                                    ? '0${qIndex + 1}'
-                                    : '${(qIndex + 1)}',
-                                qnText: controller.polyNCERTSolutions.value.data
-                                        ?.questions
-                                        ?.elementAt(qIndex)
-                                        .question ??
-                                    '',
-                                onTap: () {
-                                  controller
-                                      .polyNCERTSolutions.value.data?.questions
-                                      ?.elementAt(qIndex)
-                                      .isBookmarked = true;
-                                  if (controller.polyNCERTSolutions.value.data
-                                          ?.questions
+                  return GetBuilder<NCERTSolutionController>(
+                      builder: (controller) {
+                    return SingleChildScrollView(
+                      child: Container(
+                        // height: 400,
+                        padding: const EdgeInsets.fromLTRB(20.0, 40, 20, 40),
+                        color: Colors.white,
+                        child: Stack(
+                          children: [
+                            Column(
+                              children: [
+                                QuestionCard1(
+                                  qIndex: qIndex,
+                                  seqNo: qIndex < 9
+                                      ? '0${qIndex + 1}'
+                                      : '${(qIndex + 1)}',
+                                  qnText: controller.polyNCERTSolutions.value
+                                          .data?.questions
                                           ?.elementAt(qIndex)
-                                          .isBookmarked ==
-                                      true) {
+                                          .question ??
+                                      '',
+                                  onTap: () {
                                     controller.polyNCERTSolutions.value.data
-                                        ?.questions
-                                        ?.elementAt(qIndex)
-                                        .isBookmarked = false;
-                                    Get.bottomSheet(
-                                      Container(
-                                        decoration: const BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius: BorderRadius.only(
-                                              topLeft: Radius.circular(8),
-                                              topRight: Radius.circular(8)),
-                                        ),
-                                        height: 100,
-                                        child: Column(
-                                          children: [
-                                            const SizedBox(
-                                              height: 5,
-                                            ),
-                                            Align(
-                                              alignment: Alignment.centerRight,
-                                              child: GestureDetector(
-                                                onTap: () {
-                                                  Get.close(1);
-                                                },
-                                                child: Icon(
-                                                  Icons.close,
-                                                  color: Colors.grey.shade400,
+                                                ?.questions
+                                                ?.elementAt(qIndex)
+                                                .isBookmarked ==
+                                            false
+                                        ? controller.polyNCERTSolutions.value
+                                            .data?.questions
+                                            ?.elementAt(qIndex)
+                                            .isBookmarked = true
+                                        : controller.polyNCERTSolutions.value
+                                            .data?.questions
+                                            ?.elementAt(qIndex)
+                                            .isBookmarked = false;
+                                    controller.addBookmark(
+                                        controller.polyNCERTSolutions.value.data
+                                                ?.questions
+                                                ?.elementAt(qIndex)
+                                                .questionId ??
+                                            0,
+                                        controller.polyNCERTSolutions.value.data
+                                                ?.questions
+                                                ?.elementAt(qIndex)
+                                                .isBookmarked ??
+                                            false,
+                                        controller.polyNCERTSolutions.value.data
+                                                ?.questions
+                                                ?.elementAt(qIndex)
+                                                .question ??
+                                            '',
+                                        controller.polyNCERTSolutions.value.data
+                                                ?.questions
+                                                ?.elementAt(qIndex)
+                                                .solution ??
+                                            '');
+                                    print('Hiiiii ${controller.questions}');
+
+                                    if (controller.polyNCERTSolutions.value.data
+                                            ?.questions
+                                            ?.elementAt(qIndex)
+                                            .isBookmarked ==
+                                        false) {
+                                      Get.bottomSheet(
+                                        Container(
+                                          decoration: const BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.only(
+                                                topLeft: Radius.circular(8),
+                                                topRight: Radius.circular(8)),
+                                          ),
+                                          height: 100,
+                                          child: Column(
+                                            children: [
+                                              const SizedBox(
+                                                height: 5,
+                                              ),
+                                              Align(
+                                                alignment:
+                                                    Alignment.centerRight,
+                                                child: GestureDetector(
+                                                  onTap: () {
+                                                    Get.close(1);
+                                                  },
+                                                  child: Icon(
+                                                    Icons.close,
+                                                    color: Colors.grey.shade400,
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                            const SizedBox(
-                                              height: 5,
-                                            ),
-                                            const BuildText(
-                                                text:
-                                                    'Removing this will also remove it from any notebook'),
-                                            const SizedBox(
-                                              height: 5,
-                                            ),
-                                            Divider(
-                                              color: Colors.grey.shade400,
-                                              thickness: 1.2,
-                                            ),
-                                            const SizedBox(
-                                              height: 5,
-                                            ),
-                                            const BuildText(
-                                              text: 'REMOVE FROM BOOKMARKS',
-                                              colors: Colors.pink,
-                                            ),
-                                            const SizedBox(
-                                              height: 5,
-                                            ),
-                                          ],
+                                              const SizedBox(
+                                                height: 5,
+                                              ),
+                                              const BuildText(
+                                                  text:
+                                                      'Removing this will also remove it from any notebook'),
+                                              const SizedBox(
+                                                height: 5,
+                                              ),
+                                              Divider(
+                                                color: Colors.grey.shade400,
+                                                thickness: 1.2,
+                                              ),
+                                              const SizedBox(
+                                                height: 5,
+                                              ),
+                                              const BuildText(
+                                                text: 'REMOVE FROM BOOKMARKS',
+                                                colors: Colors.pink,
+                                              ),
+                                              const SizedBox(
+                                                height: 5,
+                                              ),
+                                            ],
+                                          ),
                                         ),
-                                      ),
-                                    );
-                                  }
-                                  // if (controller.polyNCERTSolutions.value.data
-                                  //         ?.questions
-                                  //         ?.elementAt(qIndex)
-                                  //         .isBookmarked ==
-                                  //     false) {
-
-                                  // }
-                                },
-                              ),
-                              Obx(
-                                () => controller.polyNCERTSolutions.value.data
+                                      );
+                                    }
+                                  },
+                                ),
+                                controller.polyNCERTSolutions.value.data
                                             ?.questions
                                             ?.elementAt(qIndex)
                                             .showSolution ==
                                         true
-                                    ? SolutionCard1(quesindex: qIndex)
-                                    : const SizedBox(),
-                              )
-                            ],
-                          ),
-                        ],
+                                    ? GetBuilder<NCERTSolutionController>(
+                                        builder: (controller) {
+                                        return SolutionCard1(quesindex: qIndex);
+                                      })
+                                    : const SizedBox()
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  );
+                    );
+                  });
                 },
               ),
       ),

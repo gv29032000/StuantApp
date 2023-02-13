@@ -9,7 +9,7 @@ import 'package:toppr1/screens/previous_paper/widgets/build_text.dart';
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
   final LoginController controller = Get.put(LoginController());
-  HomeController mycontroller = Get.find();
+  final HomeController mycontroller = Get.find();
   final List<String> imgList = [
     'https://cdn01.vulcanpost.com/wp-uploads/2020/06/jomstudy-app-005.jpg',
     'https://cellularnews.com/wp-content/uploads/2019/09/Study-Apps_10_Quizlet-600x338.jpg',
@@ -164,21 +164,19 @@ class LoginPage extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        // if (mycontroller.phoneNumber.value.length == 10) {
-                        //   // Get.toNamed();
-                        //   Get.offNamed(Routes.otppage);
-                        // } else {
-                        //   Get.defaultDialog(
-                        //     title: 'Alert! Number Invalid',
-                        //     titleStyle: TextStyle(
-                        //       color: Colors.red.shade400,
-                        //     ),
-                        //     middleText:
-                        //         'Please Enter the 10 digit mobile Number',
-                        //   );
-                        // }
-                        Get.offNamed(Routes.otppage);
-                        print('helllllllo ${mycontroller.phoneNumber.value}');
+                        if (mycontroller.phoneNumber.value.length == 10) {
+                          // Get.toNamed();
+                          Get.offNamed(Routes.otppage);
+                        } else {
+                          Get.defaultDialog(
+                            title: 'Alert! Number Invalid',
+                            titleStyle: TextStyle(
+                              color: Colors.red.shade400,
+                            ),
+                            middleText:
+                                'Please Enter the 10 digit mobile Number',
+                          );
+                        }
                       },
                       child: Container(
                           // width: 320,
